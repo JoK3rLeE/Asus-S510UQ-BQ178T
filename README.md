@@ -32,12 +32,15 @@ This build running on MacOS 12.14.5 (Mojave)
     2. Fingerprint
     3. FN + media controller's key
 
+# Guide 
+
+    If you have Asus VivoBook S150UQ-BQ178T, copy the EFI into EFI Partition and then reboot. 
+
 # Special Thanks
     All the Necessary file is from Tetien342 
     (Kext, Driver, Themes, config, and SSDT)
+    DW1560 Wifi Driver can be found on his repo too!
     https://github.com/tctien342/Asus-Vivobook-S510UA-High-Sierra-10.13-Hackintosh
     
-# Guide 
 
-    If you have the same series, copy the EFI into EFI Partition and then reboot. 
     
