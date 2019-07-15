@@ -5,7 +5,7 @@ This build running on MacOS 12.14.5 (Mojave)
 
 ![Alt text](https://cdn.macrumors.com/article-new/2018/01/macos_mojave_roundup.jpg)
 
-# Detail
+# Updated Detail
 
     Version:    10
     Date:       15/07/2019
@@ -14,7 +14,7 @@ This build running on MacOS 12.14.5 (Mojave)
         - Added BIOS 310
         - Updated all the necessary kext
 
-# System specification
+# Specification
 
     1.Name:           Asus Vivobook S510UQ BQ178T
     2.CPU:            Intel Core i5-7200U
