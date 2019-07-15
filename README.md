@@ -3,16 +3,12 @@ This port is for Asus VivoBook S150UQ-BQ178T
 
 This build running on MacOS 12.14.5 (Mojave)
 
-![Alt text](https://cdn.macrumors.com/article-new/2018/01/macos_mojave_roundup.jpg)
-
 # Updated Detail
 
     Version:    10
-    Date:       15/07/2019
-    Support:    BIOS 301 to 310
+    Support:    310
     Changelogs:
-        - Added BIOS 310
-        - Updated all the necessary kext
+        - Updated to BIOS 310
 
 # Specification
 
@@ -26,21 +22,8 @@ This build running on MacOS 12.14.5 (Mojave)
     8.Touchpad:       ELAN1300
     9.Bios Version:   310
 
-# Thing will not able to use
+# Thing that not able to use
 
     1. Nvidia DGPU 940MX
     2. Fingerprint
     3. FN + media controller's key
-
-# Guide 
-
-    If you have Asus VivoBook S150UQ-BQ178T, copy the EFI into EFI Partition and then reboot. 
-
-# Special Thanks
-    All the Necessary file is from Tetien342 
-    (Kext, Driver, Themes, config, and SSDT)
-    DW1560 Wifi Driver can be found on his repo too!
-    https://github.com/tctien342/Asus-Vivobook-S510UA-High-Sierra-10.13-Hackintosh
-    
-
-    
