@@ -3,7 +3,7 @@ This port is for Asus VivoBook S150UQ-BQ178T
 
 This build running on MacOS 12.14.5 (Mojave)
 
-![Alt text](https://ivanov-audio.com/wp-content/uploads/2014/01/Hackintosh-Featured-Image.png)
+![Alt text](https://www.seekclipart.com/maxclip/hoTTbT/)
 
 # Detail
 
@@ -12,8 +12,7 @@ This build running on MacOS 12.14.5 (Mojave)
     Support:    BIOS 301 to 310
     Changelogs:
         - Added BIOS 310
-        - Optimize kext and hotpatch (Ported from ZENBOOK by hieplpvip)
-        - HDMI include sound, SDcard work
+        - Updated all the necessary kext
 
 # System specification
 
@@ -33,5 +32,7 @@ This build running on MacOS 12.14.5 (Mojave)
     2. Fingerprint
     3. FN + media controller's key
 
-All the Necessary file is from https://github.com/tctien342/Asus-Vivobook-S510UA-High-Sierra-10.13-Hackintosh
-Thanks to tctien https://github.com/tctien342
+# Special Thanks
+    All the Necessary file is from Tetien342 https://github.com/tctien342/Asus-Vivobook-S510UA-High-Sierra-10.13-Hackintosh
+    
+
