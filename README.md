@@ -35,7 +35,7 @@ This build running on MacOS 12.14.5 (Mojave)
 # Special Thanks
     All the Necessary file is from Tetien342 https://github.com/tctien342/Asus-Vivobook-S510UA-High-Sierra-10.13-Hackintosh
     
-# Installation 
+# Guide 
 
     If you have the same series, copy the EFI into EFI Partition and then reboot. 
     
