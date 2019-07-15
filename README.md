@@ -33,7 +33,9 @@ This build running on MacOS 12.14.5 (Mojave)
     3. FN + media controller's key
 
 # Special Thanks
-    All the Necessary file is from Tetien342 https://github.com/tctien342/Asus-Vivobook-S510UA-High-Sierra-10.13-Hackintosh
+    All the Necessary file is from Tetien342 
+    (Kext, Driver, Themes, config, and SSDT)
+    https://github.com/tctien342/Asus-Vivobook-S510UA-High-Sierra-10.13-Hackintosh
     
 # Guide 
 
