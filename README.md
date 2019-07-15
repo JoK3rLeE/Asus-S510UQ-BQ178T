@@ -3,7 +3,7 @@ This port is for Asus VivoBook S150UQ-BQ178T
 
 This build running on MacOS 12.14.5 (Mojave)
 
-(https://cdn.macrumors.com/article-new/2018/01/macos_mojave_roundup.jpg)
+![Alt text] (https://cdn.macrumors.com/article-new/2018/01/macos_mojave_roundup.jpg)
 
 # Detail
 
