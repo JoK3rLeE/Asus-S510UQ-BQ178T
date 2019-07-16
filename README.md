@@ -27,3 +27,9 @@ This build running on MacOS 12.14.5 (Mojave)
     1. Nvidia DGPU 940MX
     2. Fingerprint
     3. FN + media controller's key
+
+# Log 
+    1. Added DDST-Disable-DGPU.aml 
+    2. Added SSDT-PowerManagement.aml
+    3. Boot will be slower compared to last update
+    (Remove SSDT-Disable-DGPU.aml will boot faster)
