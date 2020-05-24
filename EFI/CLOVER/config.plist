@@ -631,9 +631,9 @@
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
-		<string>AptioMemoryFix-64</string>
-		<string>VBoxHfs</string>
 		<string>SMCHelper-64</string>
+		<string>VBoxHfs</string>
+		<string>AptioMemoryFix-64</string>
 		<string>ApfsDriverLoader-64</string>
 	</array>
 	<key>GUI</key>
@@ -855,7 +855,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02140302D5DMT31M</string>
+		<string>C02733130CDHWVPAD</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -879,9 +879,9 @@
 		<key>ProductName</key>
 		<string>MacBookPro14,1</string>
 		<key>SerialNumber</key>
-		<string>C02TNHACHV29</string>
+		<string>C02V7GYFHV29</string>
 		<key>SmUUID</key>
-		<string>48384e30-4358-3038-3130-383033324141</string>
+		<string>DB4ACA20-B98D-473C-96C4-5017DB3BD0A6</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
