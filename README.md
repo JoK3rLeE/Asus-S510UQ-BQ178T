@@ -1,20 +1,17 @@
 # Asus-S510UQ-BQ178T
 This port is for Asus VivoBook S150UQ-BQ178T 
 
-This build running on MacOS 12.14.5 (Mojave)
+This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
 
 # Updated Detail
 
-   Support Catalina version. 
-   -Fixed Touchpad (VoodooIC2)
-   -Fixed Stuck at afps when booting (Asus EC ddst)
-   -Fixed Sound (Use MacBook 14,2) 
- Post installation tools can be found on tctien342 repo: https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh
-
-    Version:    10
-    Support:    310
+    Version:    15
+    Support:    Bios 310
     Changelogs:
-        - Updated to BIOS 310
+         Support Catalina version. 
+        -Fixed Touchpad (VoodooIC2)
+        -Fixed Stuck at afps when booting (Asus EC ddst)
+        -Fixed Sound (Use MacBook 14,2) 
 
 # Specification
 
