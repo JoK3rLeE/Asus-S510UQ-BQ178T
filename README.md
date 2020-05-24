@@ -32,7 +32,6 @@ This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
     3. FN + media controller's key
 
 # Log 
-    1. Added DDST-Disable-DGPU.aml 
-    2. Added SSDT-PowerManagement.aml
-    3. Boot will be slower compared to last update
-    (Remove SSDT-Disable-DGPU.aml will boot faster)
+    1. Cleaned up DDST for stablilty  
+    2. Updated to latest Kexts
+    3. Final stable for Catalina version. 
