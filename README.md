@@ -3,16 +3,6 @@ This port is for Asus VivoBook S150UQ-BQ178T
 
 This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
 
-# Updated Detail
-
-    Version:    15
-    Support:    Bios 310
-    Changelogs:
-         Support Catalina version. 
-        -Fixed Touchpad (VoodooIC2)
-        -Fixed Stuck at afps when booting (Asus EC ddst)
-        -Fixed Sound (Use MacBook 14,2) 
-
 # Specification
 
     1.Name:           Asus Vivobook S510UQ BQ178T
@@ -25,6 +15,16 @@ This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
     8.Touchpad:       ELAN1300
     9.Bios Version:   310
 
+# Updated Detail
+
+    Version:    15
+    Support:    Bios 310
+    Changelogs:
+         Support Catalina version. 
+        -Fixed Touchpad (VoodooIC2)
+        -Fixed Stuck at afps when booting (Asus EC ddst)
+        -Fixed Sound (Use MacBook 14,2) 
+
 # Thing that not able to use
 
     1. Nvidia DGPU 940MX
@@ -35,11 +35,6 @@ This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
     1. Cleaned up DDST for stablilty  
     2. Updated to latest Kexts
     3. Final stable for Catalina version. 
-    
-   Support Catalina version. 
-   -Fixed Touchpad (VoodooIC2)
-   -Fixed Stuck at afps when booting (Asus EC ddst)
-   -Fixed Sound (Use MacBook 14,2) 
 
 # Credit and post installations 
     For Fn keys, please use tctien342 post installation file to fix,
