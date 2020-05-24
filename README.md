@@ -35,3 +35,12 @@ This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
     1. Cleaned up DDST for stablilty  
     2. Updated to latest Kexts
     3. Final stable for Catalina version. 
+    
+   Support Catalina version. 
+   -Fixed Touchpad (VoodooIC2)
+   -Fixed Stuck at afps when booting (Asus EC ddst)
+   -Fixed Sound (Use MacBook 14,2) 
+
+# Credit 
+    Thanks to tctien342 source to complete S510UQ hackintosh build
+    For post installation: https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh
