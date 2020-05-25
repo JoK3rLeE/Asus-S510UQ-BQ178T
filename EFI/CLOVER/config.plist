@@ -10,8 +10,6 @@
 		<string>Disable other forms of CPU PM due to SSDT/Generate/PluginType=true</string>
 		<key>DSDT</key>
 		<dict>
-			<key>DropOEM_DSM</key>
-			<false/>
 			<key>Fixes</key>
 			<dict>
 				<key>FixHPET</key>
@@ -530,15 +528,15 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -disablegfxfirmware</string>
+		<string>-v igfxcflbklt=0 -wegnoegpu keepsyms=1 kext-dev-mode=1 -disablegfxfirmware abm_firstpolldelay=8000</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
+		<key>Fast</key>
+		<false/>
 		<key>NeverHibernate</key>
-		<true/>
+		<false/>
 		<key>Secure</key>
 		<false/>
-		<key>Timeout</key>
-		<integer>2</integer>
 		<key>XMPDetection</key>
 		<false/>
 	</dict>
@@ -570,7 +568,7 @@
 		<string>0x0605</string>
 	</dict>
 	<key>Comment</key>
-	<string>This config is for catalina (S510UQ) Beta</string>
+	<string>This config for S510UQ (Beta release) </string>
 	<key>Devices</key>
 	<dict>
 		<key>Audio</key>
@@ -580,19 +578,6 @@
 		</dict>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,31,3</string>
-				<key>device_type</key>
-				<string>Audio device</string>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>layout-id</key>
-				<data>AwAAAA==</data>
-				<key>model</key>
-				<string>Sunrise Point-LP HD Audio</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
@@ -631,10 +616,10 @@
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
-		<string>SMCHelper-64</string>
+		<string>ApfsDriverLoader-64</string>
 		<string>VBoxHfs</string>
 		<string>AptioMemoryFix-64</string>
-		<string>ApfsDriverLoader-64</string>
+		<string>SMCHelper-64</string>
 	</array>
 	<key>GUI</key>
 	<dict>
@@ -715,8 +700,6 @@
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
 		</array>
 		<key>KernelLapic</key>
-		<true/>
-		<key>KernelPm</key>
 		<true/>
 		<key>KernelToPatch</key>
 		<array>
@@ -855,7 +838,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02733130CDHWVPAD</string>
+		<string>C02842104GUHWVP1H</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -879,9 +862,9 @@
 		<key>ProductName</key>
 		<string>MacBookPro14,1</string>
 		<key>SerialNumber</key>
-		<string>C02V7GYFHV29</string>
+		<string>C02XK0U2HV29</string>
 		<key>SmUUID</key>
-		<string>DB4ACA20-B98D-473C-96C4-5017DB3BD0A6</string>
+		<string>5DADA3BC-524A-48B3-8132-021393B79E9C</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
