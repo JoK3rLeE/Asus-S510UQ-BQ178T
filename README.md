@@ -21,7 +21,6 @@ This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
     Support:    Bios 310
     Changelogs:
          Support Catalina version. 
-        -Fixed Touchpad (VoodooIC2)
         -Fixed Stuck at afps when booting (Asus EC ddst)
         -Fixed Sound (Use MacBook 14,2) 
 
@@ -34,9 +33,19 @@ This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
 # Log 
     1. Cleaned up DDST for stablilty  
     2. Updated to latest Kexts
-    3. Final stable for Catalina version. 
+    3. beta release for Catalina version. 
+
+# Minor issue 
+    1. Touchpad causes slow boot and malfunction randomly when boot (Reboot again will be fine)
+    2. Kernal panic/ random reboot when using external monitor/TV to stream movies.
+    3. Battery consuming due to Hardware limitation, (3600mAh Battery)
+    4. Temperature spike up when boot into system (95c) 
 
 # Credit and post installations 
-    For Fn keys, please use tctien342 post installation file to fix,
     Thanks to tctien342 source to complete S510UQ hackintosh build
     For post installation: https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh
+    Post Installation file: 
+    1.Asus Fn keys deamon (keyboard shortcut key)
+    2.Sound Input (Mic) 
+    3.Bluetooth (Only for Dw1650 wifi card replacement users)
+    
