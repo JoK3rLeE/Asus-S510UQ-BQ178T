@@ -38,7 +38,7 @@ This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
 # Minor issue 
     1. Touchpad causes slow boot and malfunction randomly when boot (Reboot again will be fine)
     2. Kernal panic/ random reboot when using external monitor/TV to stream movies.
-    3. Battery consuming due to Hardware limitation, (3600mAh Battery.
+    3. Battery consuming due to Hardware limitation, (3600mAh Battery).
     4. Temperature spike up when boot into system (95c).
 
 # Credit and post installations 
