@@ -24,7 +24,7 @@ This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
         -Fixed Stuck at afps when booting (Asus EC ddst)
         -Fixed Sound (Use MacBook 14,2) 
 
-# Thing that not able to use
+# Hardware that not able to use
 
     1. Nvidia DGPU 940MX (Totally disabled for now) 
     2. Fingerprint (Totally disabled for now)
