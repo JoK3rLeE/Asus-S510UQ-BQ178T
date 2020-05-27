@@ -40,6 +40,7 @@ Forked from tectien source, try to use his source before try mine.
 
 # Minor issue 
     1. Battery consuming due to Hardware limitation, (3600mAh Battery).
+    Battery life: 2hrs from 100 to 25%, Just streaming YouTube only.
     2. Temperature spike up when boot into system (95c).
 
 # Credit and post installations 
