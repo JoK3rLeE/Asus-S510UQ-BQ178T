@@ -10,6 +10,8 @@
 		<string>Disable other forms of CPU PM due to SSDT/Generate/PluginType=true</string>
 		<key>DSDT</key>
 		<dict>
+			<key>DropOEM_DSM</key>
+			<false/>
 			<key>Fixes</key>
 			<dict>
 				<key>FixHPET</key>
@@ -20,8 +22,6 @@
 				<true/>
 				<key>FixRTC</key>
 				<true/>
-				<key>FixShutdown</key>
-				<false/>
 				<key>FixTMR</key>
 				<true/>
 			</dict>
@@ -427,11 +427,51 @@
 					<key>Replace</key>
 					<data>WFE2RgA=</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>ELAN: change USTP to XSTP to assign default values to SSCN and FMCN</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>VVNUUA==</data>
+					<key>Replace</key>
+					<data>WFNUUA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>ELAN: disable I2C0 (by whatnameisit)</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>FA9fU1RBAKRMU1RBU01EMA==</data>
+					<key>Replace</key>
+					<data>FA9YU1RBAKRMU1RBU01EMA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>ELAN: change Method(_STA,0,NS) in GPI0 to XSTA</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>X1NUQQCgCZNTQlJH</data>
+					<key>Replace</key>
+					<data>WFNUQQCgCZNTQlJH</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>ELAN: change Method(_CRS,0,S) in ETPD to XCRS</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>X0NSUwgIU0JGSQ==</data>
+					<key>Replace</key>
+					<data>WENSUwgIU0JGSQ==</data>
+				</dict>
 			</array>
 			<key>SlpSmiAtWake</key>
-			<false/>
+			<true/>
 			<key>SuspendOverride</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>DisabledAML</key>
 		<array>
@@ -508,13 +548,66 @@
 		<false/>
 	</dict>
 	<key>Comment</key>
-	<string>This config is for S510UQ Catalina build (v1.8 pre-release)</string>
+	<string>This config is for S510UQ Catalina build (Best to use MacBookPro14,1)</string>
 	<key>Devices</key>
 	<dict>
 		<key>Audio</key>
 		<dict>
 			<key>ResetHDA</key>
 			<false/>
+		</dict>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Audio Controller</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>layout-id</key>
+				<data>AwAAAA==</data>
+				<key>model</key>
+				<string>Conexant CX8050 High-Definition Audio</string>
+				<key>name</key>
+				<string>audio</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key># LVDS, Dummy, HDMI, Dummy</key>
+				<string>LVDS@0 and HDMI@2</string>
+				<key>AAPL,ig-platform-id</key>
+				<data>AAAWWQ==</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device-id</key>
+				<data>FlkAAA==</data>
+				<key>device_type</key>
+				<string>Display Controller</string>
+				<key>framebuffer-con1-busid</key>
+				<data>AAAAAA==</data>
+				<key>framebuffer-con1-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-flags</key>
+				<data>IAAAAA==</data>
+				<key>framebuffer-con1-index</key>
+				<data>/////w==</data>
+				<key>framebuffer-con1-pipe</key>
+				<data>AAAAAA==</data>
+				<key>framebuffer-con1-type</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>AAAAgA==</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>model</key>
+				<string>Intel UHD Graphics 620</string>
+				<key>name</key>
+				<string>display</string>
+			</dict>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -745,48 +838,12 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>BiosReleaseDate</key>
-		<string>05/28/2019</string>
-		<key>BiosVendor</key>
-		<string>Apple Inc.</string>
-		<key>BiosVersion</key>
-		<string>MBP141.88Z.F000.B00.1905281616</string>
-		<key>Board-ID</key>
-		<string>Mac-B4831CEBD52A0C4C</string>
-		<key>BoardManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string>C028486004NHWVPAD</string>
-		<key>BoardType</key>
-		<integer>10</integer>
-		<key>BoardVersion</key>
-		<string>MacBookPro14,1</string>
-		<key>ChassisAssetTag</key>
-		<string>MacBook-Aluminum</string>
-		<key>ChassisManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>ChassisType</key>
-		<string>0x0009</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
-		<key>LocationInChassis</key>
-		<string>Part Component</string>
-		<key>Manufacturer</key>
-		<string>Apple Inc.</string>
-		<key>Mobile</key>
-		<true/>
-		<key>PlatformFeature</key>
-		<string>0x0000</string>
 		<key>ProductName</key>
 		<string>MacBookPro14,1</string>
-		<key>SerialNumber</key>
-		<string>C02XR6Z6HV29</string>
-		<key>SmUUID</key>
-		<string>C664F92E-A3EA-4463-97B0-DB70B485D754</string>
 		<key>Trust</key>
 		<true/>
-		<key>Version</key>
-		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
