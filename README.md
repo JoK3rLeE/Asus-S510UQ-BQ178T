@@ -39,10 +39,8 @@ Forked from tectien source, try to use his source before try mine.
     3. beta release for Catalina version. 
 
 # Minor issue 
-    1. Touchpad causes slow boot and malfunction randomly when boot (Reboot again will be fine)
-    2. Kernal panic/ random reboot when using external monitor/TV to stream movies.
-    3. Battery consuming due to Hardware limitation, (3600mAh Battery).
-    4. Temperature spike up when boot into system (95c).
+    1. Battery consuming due to Hardware limitation, (3600mAh Battery).
+    2. Temperature spike up when boot into system (95c).
 
 # Credit and post installations 
     Thanks to tctien342 source to complete S510 Series hackintosh build, I build the EFI based on his file (But added EC for booting) 
