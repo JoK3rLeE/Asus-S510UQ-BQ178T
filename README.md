@@ -3,6 +3,8 @@ This port is for Asus VivoBook S150UQ-BQ178T (7th Gen i5 series)
 
 This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
 
+Forked from tectien source, try to use his source before try mine. 
+
 # Specification
 
     1.Name:           Asus Vivobook S510UQ BQ178T
@@ -27,8 +29,9 @@ This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
 # Hardware that not able to use
 
     1. Nvidia DGPU 940MX (Totally disabled for now) 
-    2. Fingerprint (Totally disabled for now)
-    3. Intel Wifi card (If you replaced with dw1560, please use tctien342 installation file) 
+    2. Fn Media key 
+    3. Fingerprint (Totally disabled for now)
+    4. Intel Wifi card (If you replaced with dw1560, please use tctien342 installation file) 
 
 # Log 
     1. Cleaned up DDST for stablilty  
