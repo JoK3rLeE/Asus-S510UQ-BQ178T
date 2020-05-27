@@ -1,7 +1,7 @@
 # Asus-S510UQ-BQ178T
 This port is for Asus VivoBook S150UQ-BQ178T (7th Gen i5 series) 
 
-This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.4 (Catalina)
+This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.5 (Catalina)
 
 Forked from tectien source, try to use his source before try mine. 
 
@@ -39,10 +39,9 @@ Forked from tectien source, try to use his source before try mine.
     3. beta release for Catalina version. 
 
 # Minor issue 
-    1. Touchpad causes slow boot and malfunction randomly when boot (Reboot again will be fine)
-    2. Kernal panic/ random reboot when using external monitor/TV to stream movies.
-    3. Battery consuming due to Hardware limitation, (3600mAh Battery).
-    4. Temperature spike up when boot into system (95c).
+    1. Battery consuming due to Hardware limitation, (3600mAh Battery).
+    Battery life: 2hrs from 100 to 25%, Just streaming YouTube only.
+    2. Temperature spike up when boot into system (95c).
 
 # Credit and post installations 
     Thanks to tctien342 source to complete S510 Series hackintosh build, I build the EFI based on his file (But added EC for booting) 
