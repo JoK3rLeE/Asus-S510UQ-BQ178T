@@ -530,27 +530,39 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-v igfxcflbklt=0 -wegnoegpu -disablegfxfirmware</string>
+		<string>igfxcflbklt=0 -wegnoegpu -disablegfxfirmware keepsyms=1 kext-dev-mode=1 abm_firstpolldelay=8000 brcmfx-country=#a -brcmfxwowl</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
-		<false/>
+		<true/>
 		<key>Secure</key>
 		<false/>
-		<key>Timeout</key>
-		<integer>3</integer>
 		<key>XMPDetection</key>
 		<false/>
 	</dict>
 	<key>CPU</key>
 	<dict>
+		<key>BusSpeedkHz</key>
+		<integer>100459</integer>
+		<key>EnabledCores</key>
+		<integer>2</integer>
+		<key>FrequencyMHz</key>
+		<real>1600</real>
 		<key>HWPEnable</key>
+		<true/>
+		<key>HWPValue</key>
+		<integer>2483035905</integer>
+		<key>SavingMode</key>
+		<integer>255</integer>
+		<key>TDP</key>
+		<integer>15</integer>
+		<key>TurboDisable</key>
 		<false/>
-		<key>UseARTFrequency</key>
-		<false/>
+		<key>Type</key>
+		<string>0x0605</string>
 	</dict>
 	<key>Comment</key>
-	<string>This config is for S510UQ Catalina build (Best to use MacBookPro14,1)</string>
+	<string>This config is for S510UQ Catalina build (v2.3) personal use</string>
 	<key>Devices</key>
 	<dict>
 		<key>Audio</key>
@@ -627,10 +639,10 @@
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
+		<string>VBoxHfs</string>
 		<string>SMCHelper-64</string>
 		<string>ApfsDriverLoader-64</string>
 		<string>AptioMemoryFix-64</string>
-		<string>VBoxHfs</string>
 	</array>
 	<key>GUI</key>
 	<dict>
@@ -666,6 +678,8 @@
 		</dict>
 		<key>EmbeddedThemeType</key>
 		<string>Dark</string>
+		<key>Language</key>
+		<string>en-US:0</string>
 		<key>Mouse</key>
 		<dict>
 			<key>Enabled</key>
@@ -675,13 +689,13 @@
 		<dict>
 			<key>Entries</key>
 			<true/>
-			<key>Legacy</key>
-			<false/>
 			<key>Linux</key>
-			<true/>
+			<false/>
 			<key>Tool</key>
 			<true/>
 		</dict>
+		<key>ScreenResolution</key>
+		<string>1920x1080</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -702,6 +716,8 @@
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
+		<key>AppleIntelCPUPM</key>
+		<false/>
 		<key>AppleRTC</key>
 		<true/>
 		<key>DellSMBIOSPatch</key>
@@ -711,7 +727,9 @@
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
 		</array>
 		<key>KernelLapic</key>
-		<true/>
+		<false/>
+		<key>KernelPm</key>
+		<false/>
 		<key>KernelToPatch</key>
 		<array>
 			<dict>
@@ -797,7 +815,7 @@
 				<key>Comment</key>
 				<string>Boot graphics glitch, 10.12 (credit denskop)</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>AQAAdSU=</data>
 				<key>InfoPlistPatch</key>
@@ -825,6 +843,38 @@
 				<key>Replace</key>
 				<data>AQAA6yI=</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB port limit patch #1 10.15.x by pmheart, daliansky and ydeng</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>g/sPDw==</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Name</key>
+				<string>com.apple.iokit.IOUSBHostFamily</string>
+				<key>Replace</key>
+				<data>g/s/Dw==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB port limit patch #2 10.15.x by pmheart, daliansky and ydeng</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>g/kPDw==</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>g/k/Dw==</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -838,9 +888,7 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>Family</key>
-		<string>MacBook Pro</string>
-		<key>ProductName</key>
+		<key>BoardVersion</key>
 		<string>MacBookPro14,1</string>
 		<key>Trust</key>
 		<true/>
