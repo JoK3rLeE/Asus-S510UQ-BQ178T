@@ -4,6 +4,7 @@
     
 # Asus-S510UQ-BQ178T
 This port is for Asus VivoBook S150UQ-BQ178T (7th Gen i5 series) 
+Spec:https://www.notebookcheck.net/Asus-VivoBook-S15-S510UQ-i5-7200U-940MX-Laptop-Review.258494.0.html
 
 This build running on MacOS 12.14.5 (Mojave) and MacOS 12.15.5 (Catalina)
 
