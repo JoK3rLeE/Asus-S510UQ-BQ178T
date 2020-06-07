@@ -1,5 +1,3 @@
-https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Origin/Screenshot%202020-06-07%20at%203.49.01%20PM.png
-
 # Asus-S510UQ-BQ178T
 This port is for Asus VivoBook S150UQ-BQ178T (7th Gen i5 series) 
 
