@@ -44,7 +44,7 @@ Forked from tectien342 source, try to use his source before try mine.
     3.Bluetooth (Only for Dw1650 wifi card replacement users)
     
     Kext installation guide: 
-    1. Insall all the kext inside the folfer "EFI/CLOVER/kexts/Other" to L/E 
+    1. Install all the kext inside the folfer "EFI/CLOVER/kexts/Other" to L/E 
     2. Rebuild KextCache and fix permission 
-    3. Done. 
+    3. Reboot and done. 
     
