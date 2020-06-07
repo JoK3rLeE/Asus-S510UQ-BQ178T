@@ -562,7 +562,7 @@
 		<string>0x0605</string>
 	</dict>
 	<key>Comment</key>
-	<string>This config is for S510UQ Catalina build (v2.3) personal use</string>
+	<string>This config is for S510UQ-BQ178T Catalina build (v2.4)</string>
 	<key>Devices</key>
 	<dict>
 		<key>Audio</key>
@@ -676,14 +676,14 @@
 				</dict>
 			</array>
 		</dict>
-		<key>EmbeddedThemeType</key>
-		<string>Dark</string>
 		<key>Language</key>
 		<string>en-US:0</string>
 		<key>Mouse</key>
 		<dict>
 			<key>Enabled</key>
-			<false/>
+			<true/>
+			<key>Speed</key>
+			<integer>8</integer>
 		</dict>
 		<key>Scan</key>
 		<dict>
@@ -696,6 +696,8 @@
 		</dict>
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
+		<key>Theme</key>
+		<string>tonymacx86</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
