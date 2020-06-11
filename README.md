@@ -44,7 +44,7 @@ Forked from tectien342 source @ https://github.com/tctien342/Asus-Vivobook-S510U
     3.Bluetooth (Only for Dw1650 wifi card replacement users)
     
     Kext installation guide: 
-    1. Install all the kext inside the folfer "EFI/CLOVER/kexts/Other" to L/E 
+    1. Install all the kext from "EFI/CLOVER/kexts/Other" to L/E 
     2. Rebuild KextCache and fix permission 
     3. Reboot and done. 
     
