@@ -6,7 +6,7 @@
 # Asus-S510UQ-BQ178T   
 This port is for Asus VivoBook S150UQ-BQ178T (7th Gen i5 series) 
 
-Forked from tectien342 source, try to use his source before try mine. 
+Forked from tectien342 source @ https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh
 
 
 # Specification
@@ -23,9 +23,9 @@ Forked from tectien342 source, try to use his source before try mine.
 
 # Updated Detail
 
-    Version:    10.15.5 (v2.4) 
-    Support:    Bios 310
-    Changelogs: Support Catalina version. 
+    Version:    10.15.5
+    Support:    302 to 310
+    Clover :    r5119
 
 # Hardware that not able to use
 
@@ -36,7 +36,7 @@ Forked from tectien342 source, try to use his source before try mine.
 
 
 # Credit and post installations 
-    Thanks to tctien342 source to complete S510 Series hackintosh build, I build the EFI based on his file (But added EC for booting) 
+    Thanks to tctien342 source to complete S510 Series hackintosh build
     For post installation: https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh
     Post Installation file: 
     1.Asus Fn keys deamon (keyboard shortcut key)
@@ -44,7 +44,7 @@ Forked from tectien342 source, try to use his source before try mine.
     3.Bluetooth (Only for Dw1650 wifi card replacement users)
     
     Kext installation guide: 
-    1. Install all the kext inside the folfer "EFI/CLOVER/kexts/Other" to L/E 
+    1. Install all the kext from "EFI/CLOVER/kexts/Other" to L/E 
     2. Rebuild KextCache and fix permission 
     3. Reboot and done. 
     
