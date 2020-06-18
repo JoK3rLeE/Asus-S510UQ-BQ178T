@@ -6,7 +6,7 @@
 # Asus-S510UQ-BQ178T   
 This port is for Asus VivoBook S150UQ-BQ178T (7th Gen i5 series) 
 
-Forked from tectien342 source @ https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh
+Forked from [tectien342 source](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh).
 
 
 # Specification
@@ -35,16 +35,19 @@ Forked from tectien342 source @ https://github.com/tctien342/Asus-Vivobook-S510U
     4. Default Intel Wifi card
 
 # EFI File
-    Clover EFI is recommended because it's stable. Please download from release page. 
-    OpenCore still in adapting stage, it's unbootable for now.
+
+Clover EFI is recommended because it's stable. Please download from [release page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases). 
+
+OpenCore still in adapting stage, it's unbootable for now, for user want to use OpenCore you may use [whatnameisit's X510UA-BQ490 EFI](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh).
 
 # Credit and post installations 
     Thanks to tctien342 source to complete S510 Series hackintosh build
-    For post installation: https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh
     Post Installation file: 
     1.Asus Fn keys deamon (keyboard shortcut key)
     2.Sound Input (Mic) 
     3.Bluetooth (Only for Dw1650 wifi card replacement users)
+    
+For post installation, Use [tctien342 source](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh).
     
     Kext installation guide: 
     1. Install all the kext from "EFI/CLOVER/kexts/Other" to L/E 
