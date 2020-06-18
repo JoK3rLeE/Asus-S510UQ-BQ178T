@@ -34,6 +34,9 @@ Forked from tectien342 source @ https://github.com/tctien342/Asus-Vivobook-S510U
     3. Fingerprint
     4. Default Intel Wifi card
 
+# EFI File
+    Clover EFI is recommended because it's stable. Please download from release page. 
+    OpenCore still in adapting stage, it's unbootable for now.
 
 # Credit and post installations 
     Thanks to tctien342 source to complete S510 Series hackintosh build
