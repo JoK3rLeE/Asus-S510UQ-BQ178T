@@ -38,7 +38,7 @@ Forked from [tectien342 source](https://github.com/tctien342/Asus-Vivobook-S510U
 
 Clover EFI is recommended because it's stable. Please download from [release page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases). 
 
-OpenCore still in adapting stage, it's unbootable for now, for user want to use OpenCore you may use [whatnameisit's X510UA-BQ490 EFI](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh).
+OpenCore still in adapting stage, it's unbootable for now. For user want OpenCore may use [whatnameisit's X510UA-BQ490 EFI](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh).
 
 # Credit and post installations 
     Thanks to tctien342 source to complete S510 Series hackintosh build
