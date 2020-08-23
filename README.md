@@ -42,8 +42,11 @@ Please download from [release page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ17
     
     Initial release:
     Almost the same as whatnameisit EFI, But added keyboard backlight and disabled discrete GPU. 
-    Config enabled AppleXcpmCfgLock and AppleCpIPmCfgLock to fix Stuck at [EB|#LOG:EXITBS:START].
     Changed model to MacBookPro14,1 for better battery life. 
+    Config enabled AppleXcpmCfgLock and AppleCpIPmCfgLock to fix Stuck at [EB|#LOG:EXITBS:START],
+    After done install, disable AppleXcpmCfgLock and AppleCpIPmCfgLock from the config and follow
+    the Guide to manually disable CFG lock https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html
+    
     
 # Credit 
 
