@@ -24,15 +24,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>USB Port</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-UIAC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Disabled dGPUs</string>
+				<string>Disable Discrete GPUs</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -612,15 +604,6 @@
 				<string>Intel UHD Graphics 620</string>
 				<key>name</key>
 				<string>display</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>IOName</key>
-				<string>#display</string>
-				<key>class-code</key>
-				<data>/////w==</data>
-				<key>name</key>
-				<data>I2Rpc3BsYXk=</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
