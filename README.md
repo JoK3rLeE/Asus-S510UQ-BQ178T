@@ -6,8 +6,6 @@
 # Asus-S510UQ-BQ178T   
 This port is for Asus VivoBook S150UQ-BQ178T (7th Gen i5 series) 
 
-Forked from [tectien342 source](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh) and [whatnameisit source](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh).
-
 
 # Specification
 
@@ -20,13 +18,6 @@ Forked from [tectien342 source](https://github.com/tctien342/Asus-Vivobook-S510U
     7.Audio:          Conexant Audio CX8050
     8.Touchpad:       ELAN1300
     9.Bios Version:   310
-
-# Updated Detail
-
-    Version:    10.15.6
-    Support:    302 to 310
-    Clover :    r5120
-    OpenCore:   0.6.0
 
 # Hardware that not able to use
 
@@ -41,25 +32,18 @@ Forked from [tectien342 source](https://github.com/tctien342/Asus-Vivobook-S510U
 Please download from [release page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases). 
 
 
-# Credit and post installations 
-    Thanks to tctien342 source to complete S510 Series hackintosh build
-    Post Installation file: 
-    1.Asus Fn keys deamon (keyboard shortcut key)
-    2.Sound Input (Mic) 
-    3.Bluetooth (Only for Dw1650 wifi card replacement users)
-    
-For post installation, Use [tctien342 source](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh).
-    
-    Kext installation guide: 
-    1. Install all the kext from "EFI/CLOVER/kexts/Other" to L/E 
-    2. Rebuild KextCache and fix permission 
-    3. Reboot and done. 
-
 # OpenCore Changelog 
 
-    1.Almost the same as whatnameisit EFI, But added keyboard backlight and disabled discrete GPU. 
-    2.Config enabled AppleXcpmCfgLock and AppleCpIPmCfgLock to fix Stuck at [EB|#LOG:EXITBS:START].
-    3.Changed model to MacBookPro14,1 for stability. 
+    v1.1:
+    Revert USB-X, PLUG and UIAC aml that causes some random battery issue.
+    Removed dGPU info from config.
+    Added SSDT-NoHybGfx aml for better disable dGPUs. 
+    
+    
+    Initial release:
+    Almost the same as whatnameisit EFI, But added keyboard backlight and disabled discrete GPU. 
+    Config enabled AppleXcpmCfgLock and AppleCpIPmCfgLock to fix Stuck at [EB|#LOG:EXITBS:START].
+    Changed model to MacBookPro14,1 for better battery life. 
     
 # Credit 
 
