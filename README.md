@@ -50,6 +50,8 @@ Please download from [release page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ17
     
     Asus S510UQ BIOS Version: 310 
     Offset: 0x527 (Same as whatnameisit Asus x510UA offset) 
+[CFG Offset proof](https://imgur.com/a/vcTMoh7)
+
 Follow [Dortania Fixing CFG Lock](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
     
 # Credit 
