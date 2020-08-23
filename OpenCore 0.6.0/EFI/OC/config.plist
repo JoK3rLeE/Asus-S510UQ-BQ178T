@@ -16,15 +16,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>CPU Info</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-IntelCPU.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Everything else</string>
+				<string>General SSDT</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -32,11 +24,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>dGPU Spoof</string>
+				<string>USB Port</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>Spoof.aml</string>
+				<string>SSDT-UIAC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disabled dGPUs</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-NoHybGfx.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
