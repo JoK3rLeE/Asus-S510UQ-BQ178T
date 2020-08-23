@@ -37,7 +37,7 @@ Forked from [tectien342 source](https://github.com/tctien342/Asus-Vivobook-S510U
 
 # EFI File
 
-    Soon will drop Clover support. 
+    OpenCore available for Download, Updated Clover to latest version. 
 Please download from [release page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases). 
 
 
@@ -61,3 +61,18 @@ For post installation, Use [tctien342 source](https://github.com/tctien342/Asus-
     2.Config enabled AppleXcpmCfgLock and AppleCpIPmCfgLock to fix Stuck at [EB|#LOG:EXITBS:START].
     3.Changed model to MacBookPro14,1 for stability. 
     
+# Credit 
+
+[hieplpvip for Asus Zenbook hackintosh port](https://github.com/hieplpvip/ASUS-ZENBOOK-HACKINTOSH)
+
+[tctien342 for Asus S520UA hackintosh port](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh)
+
+[whatnameisit for Asus X510UA hackintosh port](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+
+[acidanthera for OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
+
+[Dortania for OpenCore Resources](https://github.com/dortania)
+
+[Dortania for SSDT-PLUG AML](https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug.html)
+
+[DRTNIA for NoHybGfx AML](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/decompiled/SSDT-NoHybGfx.dsl.zip)
