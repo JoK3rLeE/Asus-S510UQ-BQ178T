@@ -37,7 +37,7 @@ Forked from [tectien342 source](https://github.com/tctien342/Asus-Vivobook-S510U
 
 # EFI File
 
-    Soon will drop Clover support. 
+    OpenCore available for Download, Updated Clover to latest version. 
 Please download from [release page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases). 
 
 
