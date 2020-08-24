@@ -9,22 +9,23 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
 
 # Specification
 
-    1.Name:           Asus Vivobook S510UQ BQ178T
-    2.CPU:            Intel Core i5-7200U
-    3.Graphic:        Intel UHD620
-    4.Wifi:           NOT WORKING, NEED TO REPLACED WITH DW1560/BCM94352Z 
-    5.Card Reader:    Realtek_CardReader(RTL8411B_RTS5226_RTS5227)
-    6.Camera:         ASUS UVC HD
-    7.Audio:          Conexant Audio CX8050
-    8.Touchpad:       ELAN1300
-    9.Bios Version:   310
+    Name:           Asus Vivobook S510UQ-BQ178T
+    CPU:            Intel Core i5-7200U @2.5GHz
+    Graphic:        Intel UHD620
+    Wifi:           NOT WORKING, NEED TO REPLACED WITH DW1560/BCM94352Z 
+    Card Reader:    Realtek CardReader (RTL8411B_RTS5226_RTS5227)
+    Camera:         ASUS UVC HD
+    Audio:          Conexant Audio CX8050
+    Touchpad:       ELAN1300
+    Bios Version:   310
 
-# Hardware that not able to use
-
-    1. Nvidia DGPU 940MX
-    2. Fn Media key 
-    3. Fingerprint
-    4. Default Intel Wifi card
+# Hardware that unable to use in hackintosh
+   
+    Intel Wireless-AC 8265 WiFi card 
+    Partial Fn Media key
+    Nvidia GeForce 940MX 
+    Fingerprint
+    
 
 # EFI File & Changelog
 
@@ -34,16 +35,18 @@ Download EFI from: [Release Page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T
 
     
 # CFG Offset
-    If Never change any offset, you will need to disable AppleXcpmCfgLock and AppleCpIPmCfgLock 
-    in order to avoid Stuck at [EB|#LOG:EXITBS:START]
+
+    If Never change any offset, you will need to disable AppleXcpmCfgLock and AppleCpIPmCfgLock in order to avoid Stuck at [EB|#LOG:EXITBS:START] 
     
     Asus S510UQ BIOS Version: 310 
     Offset: 0x527 
-[CFG Offset proof](https://imgur.com/a/vcTMoh7)
+[CFG Offset proof](https://i.imgur.com/S4Repod.png)
 
 [Follow Dortania guide for Fixing CFG Lock](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
     
 # Credit 
+     Clover build forked from tctien342 EFI 
+     OpenCore build forked from whatnameisit EFI
 
 [Thanks to hieplpvip for Asus Zenbook hackintosh port](https://github.com/hieplpvip/ASUS-ZENBOOK-HACKINTOSH)
 
