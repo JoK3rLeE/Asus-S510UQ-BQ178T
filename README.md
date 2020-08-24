@@ -31,16 +31,15 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
 
     Changelog is available on release page. 
     Both OpenCore and Clover updated to latest version. 
+    NOTE: Tested on MacOS Version 10.15.6 (19G2021)
+          Try MacOS Big Sur AT your own risk. 
 Download EFI from: [Release Page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases)
 
     
 # CFG Offset
-
-    If Never change any offset, you will need to disable AppleXcpmCfgLock and AppleCpIPmCfgLock in order to avoid Stuck at [EB|#LOG:EXITBS:START] 
-    
-    Asus S510UQ BIOS Version: 310 
-    Offset: 0x527 
-[CFG Offset proof](https://i.imgur.com/S4Repod.png)
+<p align="center">
+<img src="https://i.imgur.com/S4Repod.png")
+    </p>
 
 [Follow Dortania guide for Fixing CFG Lock](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
     
