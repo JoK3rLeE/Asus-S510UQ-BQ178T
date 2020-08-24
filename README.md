@@ -1,10 +1,10 @@
 <p align="center">
-<img src="https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Origin/Screenshot%202020-06-07%20at%203.49.01%20PM.png?raw=true")
+<img src="https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Origin/MacVer.png?raw=true")
     </p>
 
 
 # Asus-S510UQ-BQ178T   
-This port is for Asus VivoBook S150UQ-BQ178T (7th Gen i5 series) 
+This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asus-VivoBook-S15-S510UQ-BQ178T.294032.0.html)
 
 
 # Specification
@@ -26,46 +26,32 @@ This port is for Asus VivoBook S150UQ-BQ178T (7th Gen i5 series)
     3. Fingerprint
     4. Default Intel Wifi card
 
-# EFI File
+# EFI File & Changelog
 
-    OpenCore available for Download, Updated Clover to latest version. 
-Please download from [release page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases). 
+    Changelog is available on release page. 
+    Both OpenCore and Clover updated to latest version. 
+Download EFI from: [Release Page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases)
 
-
-# OpenCore Changelog 
-
-    v1.1:
-    Revert USB-X, PLUG and UIAC aml that causes some random battery issue.
-    Removed dGPU info from config.
-    Added SSDT-NoHybGfx aml for better disable dGPUs. 
-    
-    
-    Initial release:
-    Almost the same as whatnameisit EFI, But added keyboard backlight and disabled discrete GPU. 
-    Changed model to MacBookPro14,1 for better battery life. 
     
 # CFG Offset
     If Never change any offset, you will need to disable AppleXcpmCfgLock and AppleCpIPmCfgLock 
     in order to avoid Stuck at [EB|#LOG:EXITBS:START]
     
     Asus S510UQ BIOS Version: 310 
-    Offset: 0x527 (Same as whatnameisit Asus x510UA offset) 
+    Offset: 0x527 
 [CFG Offset proof](https://imgur.com/a/vcTMoh7)
 
-Follow [Dortania Fixing CFG Lock](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
+[Follow Dortania guide for Fixing CFG Lock](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
     
 # Credit 
 
-[hieplpvip for Asus Zenbook hackintosh port](https://github.com/hieplpvip/ASUS-ZENBOOK-HACKINTOSH)
+[Thanks to hieplpvip for Asus Zenbook hackintosh port](https://github.com/hieplpvip/ASUS-ZENBOOK-HACKINTOSH)
 
-[tctien342 for Asus S510UA hackintosh port](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh)
+[Thanks to tctien342 for Asus S510UA hackintosh port](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh)
 
-[whatnameisit for Asus X510UA hackintosh port](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+[Thanks to whatnameisit for Asus X510UA hackintosh port](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
-[acidanthera for OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
+[Thanks to Dortania for OpenCore Resources and guide](https://github.com/dortania)
 
-[Dortania for OpenCore Resources](https://github.com/dortania)
+[Thanks to acidanthera for OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
 
-[Dortania for SSDT-PLUG AML](https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug.html)
-
-[DRTNIA for NoHybGfx AML](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/decompiled/SSDT-NoHybGfx.dsl.zip)
