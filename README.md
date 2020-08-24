@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Origin/MacVer.png?raw=true")
+<img src="https://i.imgur.com/ZEC8mK9.png")
     </p>
 
 
