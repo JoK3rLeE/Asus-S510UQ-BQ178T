@@ -12,7 +12,7 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
     Name:           Asus Vivobook S510UQ-BQ178T
     CPU:            Intel Core i5-7200U @2.5GHz
     Graphic:        Intel UHD620
-    Wifi:           NOT WORKING, NEED TO REPLACED WITH DW1560/BCM94352Z 
+    Wifi:           REPLACED WITH FENVI BCM94352Z 
     Card Reader:    Realtek CardReader (RTL8411B_RTS5226_RTS5227)
     Camera:         ASUS UVC HD
     Audio:          Conexant Audio CX8050
@@ -36,7 +36,7 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
 Download EFI from: [Release Page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases)
 
     
-# CFG Offset
+# CFG Lock Offset
 <p align="center">
 <img src="https://i.imgur.com/S4Repod.png")
     </p>
