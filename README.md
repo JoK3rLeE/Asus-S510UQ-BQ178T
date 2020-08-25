@@ -16,8 +16,10 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
     Card Reader:    Realtek CardReader (RTL8411B_RTS5226_RTS5227)
     Camera:         ASUS UVC HD
     Audio:          Conexant Audio CX8050
+    Battery:        42Wh (Approx 3700mAh)
     Touchpad:       ELAN1300
     Bios Version:   310
+    
 
 # Hardware that unable to use in hackintosh
    
@@ -31,19 +33,29 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
 
     Changelog is available on release page. 
     Both OpenCore and Clover updated to latest version. 
-    NOTE: Tested on MacOS Version 10.15.6 (19G2021)
-          Try MacOS Big Sur AT your own risk. 
+
 Download EFI from: [Release Page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases)
 
     
 # CFG Lock Offset
+CFG MUST BE Unlock to avoid [EB|#LOG:EXITBS:START] Issue in OpenCore. 
+Temporary workaround is to enable AppleCpuPmCfgLock and AppleXcpmCfgLock. config can be download from [here (For OpenCore 0.6.0)](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases/download/v2/config.plist)
+
 <p align="center">
 <img src="https://i.imgur.com/S4Repod.png")
     </p>
 
 [Follow Dortania guide for Fixing CFG Lock](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
     
-# Credit 
+# Tools for post installation 
+
+[Hackintool](https://github.com/headkaze/Hackintool)
+
+[Clover configurator](https://mackie100projects.altervista.org/download-clover-configurator/)
+
+[Open Core Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/)
+
+# Credits 
      Clover build forked from tctien342 EFI 
      OpenCore build forked from whatnameisit EFI
 
