@@ -28,24 +28,10 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
     Nvidia GeForce 940MX 
     Fingerprint
 
-# Disable 940MX for MacOS Big Sur 
 
-    Replace SSDT-NoHybGfx.aml to ACPI folder for disable dGPU
-    DO NOT replace the file for MacOS Catalina and for OpenCore only.
-    
-Here's the [before patch](https://i.imgur.com/jiTHabt.png) and [after patch](https://i.imgur.com/tURa1DG.png) proof.
-
-# EFI File & Changelog
-
-    Changelog is available on release page. 
-    Both OpenCore and Clover updated and run smoothly on MacOS Catalina. 
-
-Download EFI from: [Release Page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases)
-
-    
 # CFG Lock Offset
-CFG MUST BE Unlock to avoid [EB|#LOG:EXITBS:START] Issue in OpenCore. 
-Temporary workaround is to enable AppleCpuPmCfgLock and AppleXcpmCfgLock. config can be download from [here (For OpenCore 0.6.0)](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases/download/v2/config.plist)
+CFG MUST BE Unlock to avoid [EB|#LOG:EXITBS:START] Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Malle sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
+
 
 <p align="center">
 <img src="https://i.imgur.com/S4Repod.png")
