@@ -9,16 +9,19 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
 
 # Specification
 
-    Name:           Asus Vivobook S510UQ-BQ178T
-    CPU:            Intel Core i5-7200U @2.5GHz
-    Graphic:        Intel UHD620
-    Wifi:           REPLACED WITH FENVI BCM94352Z 
-    Card Reader:    Realtek CardReader (RTL8411B_RTS5226_RTS5227)
-    Camera:         ASUS UVC HD
-    Audio:          Conexant Audio CX8050
-    Battery:        42Wh (Approx 3700mAh)
-    Touchpad:       ELAN1300
-    Bios Version:   310
+Device | Details
+------------ | -------------
+Name | [Asus Vivobook S510UQ-BQ178T](https://www.notebookcheck.net/Asus-VivoBook-S15-S510UQ-BQ178T.294032.0.html)
+CPU | [Intel Core i5-7200U](https://ark.intel.com/content/www/us/en/ark/products/95443/intel-core-i5-7200u-processor-3m-cache-up-to-3-10-ghz.html)
+Graphic | Intel UHD620
+Wifi | REPLACED WITH FENVI BCM94352Z
+Card Reader | Realtek CardReader (RTL8411B_RTS5226_RTS5227)
+Camera | ASUS UVC HD
+Audio | Conexant Audio CX8050
+Battery | 42Wh (Approx 3700mAh)
+Touchpad | ELAN1300
+Bios Version | 310
+MacOS Version | 11.0 (20A5354i)
 
 # Battery Life 
     For me it's better than Catalina. 
