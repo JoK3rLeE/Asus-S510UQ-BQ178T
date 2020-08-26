@@ -65,18 +65,20 @@ As above picture, Asus S510UQ bios version 310 CFG Lock offset is 0x527,[Follow 
     
 # Tools for post installation 
 
-[Hackintool](https://github.com/headkaze/Hackintool)
+Useful Tools | Necessary Kext
+------------ | -------------
+[Open Core Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/) | [AppleALC](https://github.com/acidanthera/AppleALC)
+[Hackintool](https://github.com/headkaze/Hackintool) | [AsusSMC](https://github.com/hieplpvip/AsusSMC)
+[MaciASL](https://bitbucket.org/RehabMan/os-x-maciasl-patchmatic/downloads/) | [Lilu](https://github.com/acidanthera/Lilu)
+[IORegistryExplorer](https://github.com/vulgo/IORegistryExplorer) | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)
 
-[Clover configurator](https://mackie100projects.altervista.org/download-clover-configurator/)
-
-[Open Core Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/)
 
 # Credits 
-     OpenCore build forked from whatnameisit EFI
-
 [Thanks to whatnameisit for Asus X510UA hackintosh port](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
 [Thanks to Dortania for OpenCore Resources and guide](https://github.com/dortania)
 
 [Thanks to acidanthera for OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
+
+
 
