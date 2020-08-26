@@ -19,7 +19,14 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
     Battery:        42Wh (Approx 3700mAh)
     Touchpad:       ELAN1300
     Bios Version:   310
-    
+
+# Battery Life 
+    For me it's better than Catalina. 
+
+<p align="center">
+<img src="https://i.imgur.com/syp1bDF.png")
+    </p>
+
 
 # Hardware that unable to use in hackintosh
    
@@ -35,10 +42,10 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
 
 # SSDT-NoHybGfx.aml, the SSDT for Disable Discrete card.
 
-SSDT-NoHybGfx patches for Catalina is not applicable for Big sur. In catalina, External GPU= PEGP while in Big Sur External GPU= RP01.
-SSDT Patch can be found [here.](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
+SSDT-NoHybGfx patches for Catalina is not applicable for Big sur. In catalina, External GPU path= PEG0 while in Big Sur External GPU path= RP01.
+SSDT-NoHybGfx.aml Patch can be found [here.](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
 
-Here's the [dGPU Info](https://i.imgur.com/jiTHabt.png) and [After patched](https://i.imgur.com/tURa1DG.png) proof.
+Here's the [External GPU Info](https://i.imgur.com/jiTHabt.png) and [After patched](https://i.imgur.com/tURa1DG.png) proof.
 
 
 # CFG Lock Offset
