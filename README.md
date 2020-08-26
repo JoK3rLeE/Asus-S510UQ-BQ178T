@@ -30,7 +30,7 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
 
 
 # CFG Lock Offset
-CFG MUST BE Unlock to avoid [EB|#LOG:EXITBS:START] Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Malle sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
+CFG MUST BE Unlock to avoid [EB|#LOG:EXITBS:START] Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
 
 
 <p align="center">
