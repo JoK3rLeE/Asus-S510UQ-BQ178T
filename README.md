@@ -27,16 +27,18 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
     Partial Fn Media key
     Nvidia GeForce 940MX 
     Fingerprint
+
+# Disable 940MX for MacOS Big Sur 
+
+    Replace SSDT-NoHybGfx.aml to ACPI folder for disable dGPU
+    DO NOT replace the file for MacOS Catalina and for OpenCore only.
     
-# Current Issue 
-    Lilu broken (For BigSur beta)
-    dGPU keeps running (For BigSur beta)
-Guide to install BigSur beta on OpenCore : [Dortania Guide](dortania.github.io/OpenCore-Install-Guide/)
+Here's the [before patch](https://i.imgur.com/jiTHabt.png) and [after patch](https://i.imgur.com/tURa1DG.png) proof.
 
 # EFI File & Changelog
 
     Changelog is available on release page. 
-    Both OpenCore and Clover updated and run smoothly on latest version. 
+    Both OpenCore and Clover updated and run smoothly on MacOS Catalina. 
 
 Download EFI from: [Release Page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases)
 
@@ -48,6 +50,7 @@ Temporary workaround is to enable AppleCpuPmCfgLock and AppleXcpmCfgLock. config
 <p align="center">
 <img src="https://i.imgur.com/S4Repod.png")
     </p>
+
 As above picture, Asus S510UQ bios version 310 CFG Lock offset is 0x527,[Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
     
 # Tools for post installation 
