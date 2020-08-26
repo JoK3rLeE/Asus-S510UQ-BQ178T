@@ -38,6 +38,8 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
 SSDT-NoHybGfx patches for Catalina is not applicable for Big sur. In catalina, External GPU= PEGP while in Big Sur External GPU= RP01.
 SSDT Patch can be found [here.](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
 
+Here's the [dGPU Info](https://i.imgur.com/jiTHabt.png) and [After patched](https://i.imgur.com/tURa1DG.png) proof.
+
 
 # CFG Lock Offset
 CFG MUST BE Unlock to avoid [EB|#LOG:EXITBS:START] Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
