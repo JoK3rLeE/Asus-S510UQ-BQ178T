@@ -22,11 +22,16 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
 
 # Battery Life 
     For me it's better than Catalina. 
+    Usage: Watch movies, edit files, background streaming music on youtube using google chrome. 
 
 <p align="center">
 <img src="https://i.imgur.com/syp1bDF.png")
     </p>
+    
+# Bugs 
 
+    Turn off Keyboard backlight on CC, it will automatically on back. 
+    
 
 # Hardware that unable to use in hackintosh
    
@@ -67,12 +72,7 @@ As above picture, Asus S510UQ bios version 310 CFG Lock offset is 0x527,[Follow 
 [Open Core Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/)
 
 # Credits 
-     Clover build forked from tctien342 EFI 
      OpenCore build forked from whatnameisit EFI
-
-[Thanks to hieplpvip for Asus Zenbook hackintosh port](https://github.com/hieplpvip/ASUS-ZENBOOK-HACKINTOSH)
-
-[Thanks to tctien342 for Asus S510UA hackintosh port](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh)
 
 [Thanks to whatnameisit for Asus X510UA hackintosh port](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
