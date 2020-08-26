@@ -33,14 +33,14 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
     Replace SSDT-NoHybGfx.aml to ACPI folder for disable dGPU
     DO NOT replace the file for MacOS Catalina and for OpenCore only.
     
+MacOS Big Sur EFI File is on [new tree](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur)
 Here's the [before patch](https://i.imgur.com/jiTHabt.png) and [after patch](https://i.imgur.com/tURa1DG.png) proof.
 
-# EFI File & Changelog
-
-    Changelog is available on release page. 
+# EFI
     Both OpenCore and Clover updated and run smoothly on MacOS Catalina. 
 
 Download EFI from: [Release Page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases)
+macOS Beta EFI: [Big Sur](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur)
 
     
 # CFG Lock Offset
