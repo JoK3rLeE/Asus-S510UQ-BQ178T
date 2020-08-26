@@ -2,11 +2,6 @@
 <img src="https://i.imgur.com/piJu4XY.png")
     </p>
 
-
-# Asus-S510UQ-BQ178T   
-This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asus-VivoBook-S15-S510UQ-BQ178T.294032.0.html)
-
-
 # Specification
 
 Device | Details
