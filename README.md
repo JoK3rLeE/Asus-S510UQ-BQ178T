@@ -16,7 +16,7 @@ Audio | Conexant Audio CX8050
 Battery | 42Wh (Approx 3700mAh)
 Touchpad | ELAN1300
 Bios Version | 310
-MacOS Version | 11.0 (20A5354i)
+MacOS Version | **11.0 (20A5354i)**
 
 # Battery Life 
     For me it's better than Catalina. 
@@ -34,7 +34,7 @@ MacOS Version | 11.0 (20A5354i)
 # Hardware that unable to use in hackintosh
    
     Intel Wireless-AC 8265 WiFi card 
-    Partial Fn Media key
+    Fn Media key
     Nvidia GeForce 940MX 
     Fingerprint
 
@@ -46,20 +46,20 @@ MacOS Version | 11.0 (20A5354i)
 # SSDT-NoHybGfx.aml, the SSDT for Disable Discrete card.
 
 SSDT-NoHybGfx patches for Catalina is not applicable for Big sur. In catalina, External GPU path= PEG0 while in Big Sur External GPU path= RP01.
-SSDT-NoHybGfx.aml Patch can be found [here.](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
+**SSDT-NoHybGfx.aml** Patch can be found [here.](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
 
 Here's the [External GPU Info](https://i.imgur.com/jiTHabt.png) and [After patched](https://i.imgur.com/tURa1DG.png) proof.
 
 
 # CFG Lock Offset
-CFG MUST BE Unlock to avoid [EB|#LOG:EXITBS:START] Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
+CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
 
 
 <p align="center">
 <img src="https://i.imgur.com/S4Repod.png")
     </p>
 
-As above picture, Asus S510UQ bios version 310 CFG Lock offset is 0x527,[Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
+As above picture, Asus S510UQ bios version 310 CFG Lock offset is **0x527**,[Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
     
 # Tools for post installation 
 
