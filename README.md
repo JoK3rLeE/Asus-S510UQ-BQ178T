@@ -33,7 +33,7 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
     - Updated SSDT for disable Discrete GPU 
     - Updated Config
 
-# Disable Discrete card SSDT
+# SSDT-NoHybGfx.aml, the SSDT for Disable Discrete card.
 
 SSDT-NoHybGfx patches for Catalina is not applicable for Big sur. In catalina, External GPU= PEGP while in Big Sur External GPU= RP01.
 SSDT Patch can be found [here.](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
