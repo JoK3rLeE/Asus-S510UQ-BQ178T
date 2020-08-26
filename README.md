@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/piJu4XY.png")
+<img src="https://i.imgur.com/ZEC8mK9.png")
     </p>
 
 
@@ -21,28 +21,21 @@ This port is for [Asus VivoBook S150UQ-BQ178T](https://www.notebookcheck.net/Asu
     Bios Version:   310
     
 
-# Hardware that unable to use in hackintosh
+# Hardware that are unable to use in hackintosh
    
     Intel Wireless-AC 8265 WiFi card 
     Partial Fn Media key
     Nvidia GeForce 940MX 
     Fingerprint
 
-# Disable 940MX for MacOS Big Sur 
+# MacOS Big Sur
 
-    Replace SSDT-NoHybGfx.aml to ACPI folder for disable dGPU
-    DO NOT replace the file for MacOS Catalina and for OpenCore only.
-    
 MacOS Big Sur EFI File is on [new tree](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur)
 
-Here's the [before patch](https://i.imgur.com/jiTHabt.png) and [after patch](https://i.imgur.com/tURa1DG.png) proof.
 
 # EFI
-    Both OpenCore and Clover updated and run smoothly on MacOS Catalina. 
 
 Download EFI from: [Release Page](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases)
-
-macOS Beta EFI: [Big Sur](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur)
 
     
 # CFG Lock Offset
@@ -53,7 +46,7 @@ Temporary workaround is to enable AppleCpuPmCfgLock and AppleXcpmCfgLock. config
 <img src="https://i.imgur.com/S4Repod.png")
     </p>
 
-As above picture, Asus S510UQ bios version 310 CFG Lock offset is 0x527,[Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
+As above picture, Asus S510UQ bios version 310 CFG Lock offset is 0x527, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
     
 # Tools for post installation 
 
