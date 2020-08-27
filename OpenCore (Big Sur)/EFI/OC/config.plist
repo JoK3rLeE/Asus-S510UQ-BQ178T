@@ -8,11 +8,19 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Rename APSS to APXX</string>
+				<string>Quiet and optimal fan speed</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-APSS.aml</string>
+				<string>SSDT-FAN-MOD.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Battery FBST fix</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-FBST.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -32,14 +40,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>USB Power</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-USBX.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>XCPM fix</string>
 				<key>Enabled</key>
 				<true/>
@@ -52,71 +52,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-S510UQ.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Quiet and optimal fan speed</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-FAN-MOD.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Fix HPET</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-HPET.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Fix touchpad</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-I2C1_USTP.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable MATH and LDR2</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-MATHLDR2_STA.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Add MEM2</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-MEM2.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Fix OS</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-OSYS.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Change keyboard mapping</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-PS2.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Battery FBST fix</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-FBST.aml</string>
+				<string>SSDT-X510UQ.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
