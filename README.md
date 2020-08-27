@@ -14,7 +14,7 @@ Fingerprint | ELAN EFSA96SA-H700Z(FA473A-3200) | :x:
 Card Reader | Realtek CardReader (RTL8411B_RTS5226_RTS5227) | :heavy_check_mark:
 Camera | ASUS UVC HD | :heavy_check_mark:
 Audio | Conexant Audio CX8050 | :heavy_check_mark:  
-Battery | 42Wh | :heavy_check_mark:   *Solid 3hrs of usage*
+Battery | B31N1637 42Wh 3653mAh(TYP) | :heavy_check_mark:   *Solid 3hrs of usage*
 Touchpad | ELAN1300 | :heavy_check_mark:
 Bios Version | [**310**](https://dlcdnets.asus.com/pub/ASUS/nb/X510UQ/X510UQAS310.zip) | :heavy_check_mark: 
 MacOS Version | [**11.0 (20A5354i)**](https://developer.apple.com/macos/) | :heavy_check_mark:
