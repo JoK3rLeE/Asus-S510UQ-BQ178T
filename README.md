@@ -43,9 +43,19 @@ Unsupported Hardware: [Detail](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tr
 SSDT Name | Details | Link
 ------------ | ------------- | -------------
 SSDT-NoHybGfx.aml | Disable dGPU patch in Big Sur, refer [External GPU Info](https://i.imgur.com/jiTHabt.png) and [After patched](https://i.imgur.com/tURa1DG.png) | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
-SSDT-DATA.aml | DATA For CpuFriend, Create own CPU friend data [here](https://github.com/corpnewt/CPUFriendFriend) | [0x80 Balance Power](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-DATA.aml)
+SSDT-DATA.aml | DATA For CpuFriend, Create own CPU friend data [here](https://github.com/corpnewt/CPUFriendFriend) | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-DATA.aml)
 SSDT-S510UQ.aml | Forked from whatnameisit ACPI patch, but added keyboard baklight patch. | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-S510UQ.aml)
-SSDT-APSS.aml | Download from whatnameisit git | [whatnameisit GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+SSDT-PS2.aml | Keyboard mappinng, from whatnameisit git | [whatnameisit GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+SSDT-APSS.aml | APSS to APXX, from whatnameisit git | [whatnameisit GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+SSDT-USBX.aml | USB Power, from whatnameisit git | [whatnameisit GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+SSDT-HPET.aml | HPET patch, from whatnameisit git | [whatnameisit GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+SSDT-MEM2.aml | MEM2 patch, from whatnameisit git | [whatnameisit GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+SSDT-OSYS.aml | OS patch, from whatnameisit git | [whatnameisit GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+SSDT-FBST.aml | Battery FBST patch, from whatnameisit git | [whatnameisit GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+SSDT-FAN-MOD.aml | CPU Fan mod, from whatnameisit git | [whatnameisit GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+SSDT-I2C1_USTP.aml | Touchpad patch, from whatnameisit git | [whatnameisit GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+SSDT-MATHLDR2_STA.aml | Enable MATH and LDR2, from whatnameisit git | [whatnameisit GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+
 
 # CFG Lock Offset
 CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
@@ -59,12 +69,12 @@ As above picture, Asus S510UQ bios version 310 CFG Lock offset is **0x527**,[Fol
     
 # Tools for post installation 
 
-Useful Tools | Necessary Kext
------------- | -------------
-[Open Core Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/) | [AppleALC](https://github.com/acidanthera/AppleALC)
-[Hackintool](https://github.com/headkaze/Hackintool) | [AsusSMC](https://github.com/hieplpvip/AsusSMC)
-[MaciASL](https://bitbucket.org/RehabMan/os-x-maciasl-patchmatic/downloads/) | [Lilu](https://github.com/acidanthera/Lilu)
-[IORegistryExplorer](https://github.com/vulgo/IORegistryExplorer) | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)
+Useful Tools |
+------------ |
+[Open Core Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/)
+[Hackintool](https://github.com/headkaze/Hackintool)
+[MaciASL](https://bitbucket.org/RehabMan/os-x-maciasl-patchmatic/downloads/) 
+[IORegistryExplorer](https://github.com/vulgo/IORegistryExplorer) 
 
 
 # Credits 
