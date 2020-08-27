@@ -6,7 +6,6 @@
 
 Device | Details | Hardware status 
 ------------ | ------------- | ------------- 
-Name | [Asus Vivobook S510UQ-BQ178T](https://www.notebookcheck.net/Asus-VivoBook-S15-S510UQ-BQ178T.294032.0.html) 
 CPU | [Intel Core i5-7200U](https://ark.intel.com/content/www/us/en/ark/products/95443/intel-core-i5-7200u-processor-3m-cache-up-to-3-10-ghz.html) | :heavy_check_mark:
 Graphic | Intel UHD620 | :heavy_check_mark:
 Discrete Graphic | Nvidia GeForce 940MX | :x:  Disabled with SSDT patch
@@ -19,7 +18,7 @@ Battery | 42Wh | :heavy_check_mark:
 Touchpad | ELAN1300 | :heavy_check_mark:
 Bios Version | 310 | :heavy_check_mark: 
 MacOS Version | **11.0 (20A5354i)** | :heavy_check_mark:
-OpenCore Version | [**0.6.0**](https://github.com/acidanthera/OpenCorePkg)
+OpenCore Version | [**0.6.0**](https://github.com/acidanthera/OpenCorePkg) | :heavy_check_mark:
 
 
 # Battery Life 
