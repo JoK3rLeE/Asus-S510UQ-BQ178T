@@ -18,6 +18,8 @@ Touchpad | ELAN1300
 Bios Version | 310
 MacOS Version | **11.0 (20A5354i)**
 
+Unsupported Hardware: [Detail](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/master#hardware-that-are-unable-to-use-in-hackintosh)
+
 # Battery Life 
     For me it's better than Catalina. 
     Usage: Watch movies, edit files, background streaming music on youtube using google chrome. 
@@ -31,25 +33,19 @@ MacOS Version | **11.0 (20A5354i)**
     Turn off Keyboard backlight on CC, it will automatically on back. 
     
 
-# Hardware that unable to use in hackintosh
-   
-    Intel Wireless-AC 8265 WiFi card 
-    Fn Media key
-    Nvidia GeForce 940MX 
-    Fingerprint
-
 # Changelog 
     
     - Updated SSDT for disable Discrete GPU 
     - Updated Config
 
-# SSDT-NoHybGfx.aml, the SSDT for Disable Discrete card.
+# SSDT Patch
 
-SSDT-NoHybGfx patches for Catalina is not applicable for Big sur. In catalina, External GPU path= PEG0 while in Big Sur External GPU path= RP01.
-**SSDT-NoHybGfx.aml** Patch can be found [here.](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
-
-Here's the [External GPU Info](https://i.imgur.com/jiTHabt.png) and [After patched](https://i.imgur.com/tURa1DG.png) proof.
-
+SSDT Name | Details | Link
+------------ | ------------- | -------------
+SSDT-NoHybGfx.aml | Disable dGPU patch in Big Sur, refer [External GPU Info](https://i.imgur.com/jiTHabt.png) and [After patched](https://i.imgur.com/tURa1DG.png) | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
+SSDT-DATA.aml | DATA For CpuFriend, Create own CPU friend data [here](https://github.com/corpnewt/CPUFriendFriend) | [0x80 Balance Power](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-DATA.aml)
+SSDT-S510UQ.aml | Forked from whatnameisit ACPI patch, but added keyboard baklight patch. | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-S510UQ.aml)
+SSDT-APSS.aml | Download from whatnameisit git | [whatnameisit GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
 # CFG Lock Offset
 CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
