@@ -4,19 +4,21 @@
 
 # Specification
 
-Device | Details
------------- | -------------
-Name | [Asus Vivobook S510UQ-BQ178T](https://www.notebookcheck.net/Asus-VivoBook-S15-S510UQ-BQ178T.294032.0.html)
-CPU | [Intel Core i5-7200U](https://ark.intel.com/content/www/us/en/ark/products/95443/intel-core-i5-7200u-processor-3m-cache-up-to-3-10-ghz.html)
-Graphic | Intel UHD620
-Wifi | REPLACED WITH FENVI BCM94352Z
-Card Reader | Realtek CardReader (RTL8411B_RTS5226_RTS5227)
-Camera | ASUS UVC HD
-Audio | Conexant Audio CX8050
-Battery | 42Wh (Approx 3700mAh)
-Touchpad | ELAN1300
-Bios Version | 310
-MacOS Version | **11.0 (20A5354i)**
+Device | Details | Hardware status 
+------------ | ------------- | ------------- 
+Name | [Asus Vivobook S510UQ-BQ178T](https://www.notebookcheck.net/Asus-VivoBook-S15-S510UQ-BQ178T.294032.0.html) 
+CPU | [Intel Core i5-7200U](https://ark.intel.com/content/www/us/en/ark/products/95443/intel-core-i5-7200u-processor-3m-cache-up-to-3-10-ghz.html) | :heavy_check_mark:
+Graphic | Intel UHD620 | :heavy_check_mark:
+Discrete Graphic | Nvidia GeForce 940MX | :x:  Disabled with SSDT patch
+Wifi | Intel Wireless-AC 8265 | :x:  Replaced with FENVI BCM94352Z 
+Fingerprint | ELAN EFSA96SA-H700Z(FA473A-3200) | :x: 
+Card Reader | Realtek CardReader (RTL8411B_RTS5226_RTS5227) | :heavy_check_mark:
+Camera | ASUS UVC HD | :heavy_check_mark:
+Audio | Conexant Audio CX8050 | :heavy_check_mark:
+Battery | 42Wh | :heavy_check_mark:
+Touchpad | ELAN1300 | :heavy_check_mark:
+Bios Version | 310 | :heavy_check_mark: 
+MacOS Version | **11.0 (20A5354i)** | :heavy_check_mark:
 
 Unsupported Hardware: [Detail](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/master#hardware-that-are-unable-to-use-in-hackintosh)
 
