@@ -19,8 +19,8 @@ Battery | 42Wh | :heavy_check_mark:
 Touchpad | ELAN1300 | :heavy_check_mark:
 Bios Version | 310 | :heavy_check_mark: 
 MacOS Version | **11.0 (20A5354i)** | :heavy_check_mark:
+OpenCore Version | [**0.6.0**]((https://github.com/acidanthera/OpenCorePkg)
 
-Unsupported Hardware: [Detail](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/master#hardware-that-are-unable-to-use-in-hackintosh)
 
 # Battery Life 
     For me it's better than Catalina. 
