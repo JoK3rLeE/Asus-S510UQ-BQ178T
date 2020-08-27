@@ -37,11 +37,11 @@ SSDT-NoHybGfx.aml | Disable dGPU patch in Big Sur, refer [External GPU Info](htt
 SSDT-X510UQ.aml | General SSDT | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-X510UQ.aml)
 SSDT-PLUG.aml | Native CPU power management, CPU mode has set to 0x80 (Balance power) | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-PLUG.aml)
 ~~SSDT-PS2.aml~~ | Keyboard mappinng **merged into SSDT-X510UQ** | [GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
-~~SSDT-APSS.aml~~ | APSS to APXX **merged into SSDT-X510UQ** | [GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 ~~SSDT-USBX.aml~~ | USB Power **merged into SSDT-X510UQ** | [GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 ~~SSDT-HPET.aml~~ | HPET patch **merged into SSDT-X510UQ** | [GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 ~~SSDT-MEM2.aml~~ | MEM2 patch **merged into SSDT-X510UQ** | [GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 ~~SSDT-I2C1_USTP.aml~~ | Touchpad patch **merged into SSDT-X510UQ** | [GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+~~SSDT-APSS.aml~~ | APSS to APXX **REMOVED** | [GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 ~~SSDT-OSYS.aml~~ | OS patch **REMOVED** | [GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 ~~SSDT-MATHLDR2_STA.aml~~ | Enable MATH and LDR2 **REMOVED** | [GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 ~~SSDT-DATA.aml~~ | ~~DATA For CpuFriend~~ **REMOVED** | **REMOVED**
