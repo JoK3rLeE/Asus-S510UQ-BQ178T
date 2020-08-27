@@ -13,8 +13,8 @@ Wifi | Intel Wireless-AC 8265 | :x:  Replaced with *FENVI BCM94352Z*
 Fingerprint | ELAN EFSA96SA-H700Z(FA473A-3200) | :x: 
 Card Reader | Realtek CardReader (RTL8411B_RTS5226_RTS5227) | :heavy_check_mark:
 Camera | ASUS UVC HD | :heavy_check_mark:
-Audio | Conexant Audio CX8050 | :heavy_check_mark:
-Battery | 42Wh | :heavy_check_mark: Solid 3hrs of usage
+Audio | Conexant Audio CX8050 | :heavy_check_mark:  
+Battery | 42Wh | :heavy_check_mark:   *Solid 3hrs of usage*
 Touchpad | ELAN1300 | :heavy_check_mark:
 Bios Version | [**310**](https://dlcdnets.asus.com/pub/ASUS/nb/X510UQ/X510UQAS310.zip) | :heavy_check_mark: 
 MacOS Version | [**11.0 (20A5354i)**](https://developer.apple.com/macos/) | :heavy_check_mark:
@@ -23,12 +23,6 @@ OpenCore Version | [**0.6.0**](https://github.com/acidanthera/OpenCorePkg) | :he
 # Bugs 
 
     Turn off Keyboard backlight from CC switch will automatically on back randomly. 
-    
-
-# Changelog 
-    
-    - Updated SSDT for disable Discrete GPU 
-    - Updated Config
 
 # SSDT Patch
 
