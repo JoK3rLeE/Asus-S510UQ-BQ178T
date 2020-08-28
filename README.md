@@ -22,10 +22,10 @@ OpenCore | [**0.6.0**](https://github.com/acidanthera/OpenCorePkg) | :heavy_chec
 
 # Asus Other Models 
 
-Hackintosh Device | Maintainer | Details | Clover | OpenCore | Link
------------- | ------------- | ------------- | ------------- | ------------- | ------------- 
-S510UA/F510UA | tctien342 | Model with KB Light and dGPU Version | :heavy_check_mark: | :x: | [GitHub](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh)
-X510UA-BQ490 | whatnameisit | Model with No KB light and dGPU Version | :heavy_check_mark: | :heavy_check_mark: | [GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+Hackintosh  | Details | Clover | OpenCore | Maintainer link
+------------ | ------------- | ------------- | ------------- | ------------- 
+S510UA/F510UA | With KB Light and dGPU version | :heavy_check_mark: | :x: | [tctien342](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh)
+X510UA-BQ490 | With No KB light and dGPU version | :heavy_check_mark: | :heavy_check_mark: | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
 # SSDT Patch
 
@@ -35,21 +35,21 @@ There are two version of EFI, **OpenCore-Minimal** and **OC-Beta**. The table be
 
 :x:= *Removed from ACPI and merged into SSDT-S510UQ.aml*
 
-SSDT | Details | OC-Beta | Minimal | Download
------------- | ------------- | ------------- | ------------- | -------------
-SSDT-APSS.aml | APSS to APXX | :heavy_check_mark: | :x: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-APSS.aml)
-SSDT-FAN-MOD.aml | CPU Fan mod | :heavy_check_mark: | :heavy_check_mark: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-FAN-MOD.aml)
-SSDT-FBST.aml | Battery FBST patch | :heavy_check_mark: | :heavy_check_mark: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-FBST.aml)
-SSDT-HPET.aml | HPET patch | :heavy_check_mark: | :x: |  [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-HPET.aml)
-SSDT-I2C1_USTP.aml | Touchpad patch | :heavy_check_mark: | :x: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-I2C1_USTP.aml)
-SSDT-MATHLDR2_STA.aml | Enable MATH and LDR2 | :heavy_check_mark: | :x: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-MATHLDR2_STA.aml)
-SSDT-MEM2.aml | MEM2 patch | :heavy_check_mark: | :x: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-MEM2.aml)
-SSDT-NoHybGfx.aml | Disable dGPU patch (**Big Sur ONLY**)* | :heavy_check_mark: | :x: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
-SSDT-OSYS.aml | OS patch | :heavy_check_mark: | :x: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-OSYS.aml)
-SSDT-PLUG.aml | XCPM patch | :heavy_check_mark: | :heavy_check_mark: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-PLUG.aml)
-SSDT-PS2.aml | Keyboard mappinng | :heavy_check_mark: | :x: |  [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/ACPI/SSDT-PS2.aml)
-SSDT-USBX.aml | USB Power | :heavy_check_mark: | :x: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-USBX.aml)
-SSDT-X510UQ.aml | General SSDT | :heavy_check_mark: | :heavy_check_mark: |  
+SSDT | Details | OC-Beta | Minimal 
+------------ | ------------- | ------------- | -------------
+[SSDT-APSS.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-APSS.aml) | APSS to APXX | :heavy_check_mark: | :x: 
+[SSDT-FAN-MOD.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-FAN-MOD.aml) | CPU Fan mod | :heavy_check_mark: | :heavy_check_mark:
+[SSDT-FBST.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-FBST.aml) | Battery FBST patch | :heavy_check_mark: | :heavy_check_mark: 
+[SSDT-HPET.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-HPET.aml) | HPET patch | :heavy_check_mark: | :x: 
+[SSDT-I2C1_USTP.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-I2C1_USTP.aml) | Touchpad patch | :heavy_check_mark: | :x: 
+[SSDT-MATHLDR2_STA.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-MATHLDR2_STA.aml) | Enable MATH and LDR2 | :heavy_check_mark: | :x: 
+[SSDT-MEM2.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-MEM2.aml) | MEM2 patch | :heavy_check_mark: | :x: 
+[SSDT-NoHybGfx.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-NoHybGfx.aml) | Disable dGPU patch (**Big Sur ONLY**)* | :heavy_check_mark: | :x: 
+[SSDT-OSYS.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-OSYS.aml) | OS patch | :heavy_check_mark: | :x: 
+[SSDT-PLUG.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-PLUG.aml) | XCPM patch | :heavy_check_mark: | :heavy_check_mark: 
+[SSDT-PS2.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/ACPI/SSDT-PS2.aml) | Keyboard mappinng | :heavy_check_mark: | :x: 
+[SSDT-USBX.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-USBX.aml) | USB Power | :heavy_check_mark: | :x: 
+SSDT-X510UQ.aml | General SSDT | :heavy_check_mark: | :heavy_check_mark:   
 
 Use OC-Beta if you not sure how to use patchmatic MaciASL for patching. 
 
