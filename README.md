@@ -27,26 +27,26 @@ OpenCore | [**0.6.0**](https://github.com/acidanthera/OpenCorePkg) | :heavy_chec
 # SSDT Patch
 Note: SSDT might cause the boot time increase. 
 
-I've removed the SSDT that I don't really need it. If you need, you can always download from the list. (Don't forget to write the path to ACPI table). 
+There are two version of EFI, **OpenCore-Minimal** and **OC-Beta**. The table below shows the difference between both. 
 
 [User with **X510UA-BQ490** are advised to use whatnameisit EFI which is more stable and well maintained.](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
-**Included**= *Available in ACPI folder* **Merged**= *Patch merged into SSDT-X510UQ* **Removed**= *Totally remove from ACPI*
+:heavy_check_mark:= *Available in ACPI folder* :x:= *Totally remove from ACPI* **Merged**= *Patch merged into SSDT-X510UQ* 
 
-SSDT | Details | Status | Download Link
------------- | ------------- | ------------- | -------------
-SSDT-APSS.aml | APSS to APXX | **Removed** | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/master/OpenCore%200.6.0/EFI/OC/ACPI/SSDT-APSS.aml)
-SSDT-FAN-MOD.aml | CPU Fan mod | *Included* | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/master/OpenCore%200.6.0/EFI/OC/ACPI/SSDT-FAN-MOD.aml)
-SSDT-FBST.aml | Battery FBST patch | *Included* | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/master/OpenCore%200.6.0/EFI/OC/ACPI/SSDT-FBST.aml)
-SSDT-HPET.aml | HPET patch | **Removed** |  [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/master/OpenCore%200.6.0/EFI/OC/ACPI/SSDT-HPET.aml)
-SSDT-I2C1_USTP.aml | Touchpad patch | ***Merged*** | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/master/OpenCore%200.6.0/EFI/OC/ACPI/SSDT-I2C1_USTP.aml)
-SSDT-MATHLDR2_STA.aml | Enable MATH and LDR2 | **Removed** | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/master/OpenCore%200.6.0/EFI/OC/ACPI/SSDT-MEM2.aml)
-SSDT-MEM2.aml | MEM2 patch | ***Merged*** | [GitHub](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
-SSDT-NoHybGfx.aml | Disable dGPU patch (**Big Sur ONLY**) | *Included* | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/raw/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
-SSDT-OSYS.aml | OS patch | **Removed** | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/master/OpenCore%200.6.0/EFI/OC/ACPI/SSDT-OSYS.aml)
-SSDT-PS2.aml | Keyboard mappinng | ***Merged*** |  [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/master/OpenCore%200.6.0/EFI/OC/ACPI/SSDT-PS2.aml)
-SSDT-USBX.aml | USB Power | ***Merged*** | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/master/OpenCore%200.6.0/EFI/OC/ACPI/SSDT-USBX.aml)
-SSDT-X510UQ.aml | General SSDT | __Main SSDT__ | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/OpenCore%20(Big%20Sur)/EFI/OC/ACPI/SSDT-X510UQ.aml)
+SSDT | Details | OC-Beta | Minimal | Download
+------------ | ------------- | ------------- | ------------- | -------------
+SSDT-APSS.aml | APSS to APXX | :heavy_check_mark: | :x: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-APSS.aml)
+SSDT-FAN-MOD.aml | CPU Fan mod | :heavy_check_mark: | :heavy_check_mark: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-FAN-MOD.aml)
+SSDT-FBST.aml | Battery FBST patch | :heavy_check_mark: | :heavy_check_mark: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-FBST.aml)
+SSDT-HPET.aml | HPET patch | :heavy_check_mark: | :x: |  [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-HPET.aml)
+SSDT-I2C1_USTP.aml | Touchpad patch | :heavy_check_mark: | **Merged** | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-I2C1_USTP.aml)
+SSDT-MATHLDR2_STA.aml | Enable MATH and LDR2 | :heavy_check_mark: | :x: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-MATHLDR2_STA.aml)
+SSDT-MEM2.aml | MEM2 patch | :heavy_check_mark: | **Merged** | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-MEM2.aml)
+SSDT-NoHybGfx.aml | Disable dGPU patch (**Big Sur ONLY**) | :heavy_check_mark: | *Included* | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
+SSDT-OSYS.aml | OS patch | :heavy_check_mark: | :x: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-OSYS.aml)
+SSDT-PS2.aml | Keyboard mappinng | :heavy_check_mark: | **Merged** |  [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/ACPI/SSDT-PS2.aml)
+SSDT-USBX.aml | USB Power | :heavy_check_mark: | **Merged** | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-USBX.aml)
+SSDT-X510UQ.aml | General SSDT | Main SSDT | Main SSDT | -
 
 The purpose of SSDT-PLUG is to allow the kernel's XCPM(XNU's CPU Power Management) to manage our CPU's power management. 
 
