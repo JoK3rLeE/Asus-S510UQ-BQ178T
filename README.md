@@ -42,7 +42,7 @@ SSDT-HPET.aml | HPET patch | :heavy_check_mark: | :x: |  [GitHub](https://github
 SSDT-I2C1_USTP.aml | Touchpad patch | :heavy_check_mark: | **Merged** | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-I2C1_USTP.aml)
 SSDT-MATHLDR2_STA.aml | Enable MATH and LDR2 | :heavy_check_mark: | :x: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-MATHLDR2_STA.aml)
 SSDT-MEM2.aml | MEM2 patch | :heavy_check_mark: | **Merged** | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-MEM2.aml)
-SSDT-NoHybGfx.aml | Disable dGPU patch (**Big Sur ONLY**) | :heavy_check_mark: | *Included* | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
+SSDT-NoHybGfx.aml | Disable dGPU patch (**Big Sur ONLY**) | :heavy_check_mark: | **Merged** | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-NoHybGfx.aml)
 SSDT-OSYS.aml | OS patch | :heavy_check_mark: | :x: | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-OSYS.aml)
 SSDT-PS2.aml | Keyboard mappinng | :heavy_check_mark: | **Merged** |  [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/ACPI/SSDT-PS2.aml)
 SSDT-USBX.aml | USB Power | :heavy_check_mark: | **Merged** | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-USBX.aml)
