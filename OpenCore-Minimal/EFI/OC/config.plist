@@ -24,14 +24,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Hide dGPU</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-NoHybGfx.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>XCPM fix</string>
 				<key>Enabled</key>
 				<true/>
