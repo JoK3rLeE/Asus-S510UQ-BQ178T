@@ -24,8 +24,8 @@ OpenCore | [**0.6.0**](https://github.com/acidanthera/OpenCorePkg) | :heavy_chec
 
 Hackintosh  | Details | Clover | OpenCore | Maintainer link
 ------------ | ------------- | ------------- | ------------- | ------------- 
-S510UA/F510UA | With KB Light and dGPU version | :heavy_check_mark: | :x: | [tctien342](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh)
-X510UA-BQ490 | With No KB light and dGPU version | :heavy_check_mark: | :heavy_check_mark: | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+S510UA/F510UA | ***With*** KB Light and dGPU version | :heavy_check_mark: | :x: | [tctien342](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh)
+X510UA-BQ490 | ***No*** KB light and dGPU version | :heavy_check_mark: | :heavy_check_mark: | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
 # SSDT Patch
 
@@ -33,7 +33,7 @@ There are two version of EFI, **OpenCore-Minimal** and **OC-Beta**. The table be
 
 :heavy_check_mark:= *Available in ACPI folder* 
 
-:x:= *Removed from ACPI and merged into SSDT-S510UQ.aml*
+:x:= *Removed from ACPI folder/ patch included in general SSDT*
 
 SSDT | Details | OC-Beta | Minimal 
 ------------ | ------------- | ------------- | -------------
@@ -51,7 +51,7 @@ SSDT | Details | OC-Beta | Minimal
 [SSDT-USBX.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-USBX.aml) | USB Power | :heavy_check_mark: | :x: 
 SSDT-X510UQ.aml | General SSDT | :heavy_check_mark: | :heavy_check_mark:   
 
-Use OC-Beta if you not sure how to use patchmatic MaciASL for patching. 
+For SSDT-NoHybGfx dsl patch, [refer to ACPI folder.](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/ACPI%20/SSDT-NoHybGfx.dsl)
 
 ## SSDT-PLUG
 
