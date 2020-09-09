@@ -18,9 +18,11 @@ Battery | B31N1637 42Wh 3653mAh(TYP) | :heavy_check_mark:   *Solid 3hrs of usage
 Touchpad | ELAN1300 | :heavy_check_mark:
 Bios | [**310**](https://dlcdnets.asus.com/pub/ASUS/nb/X510UQ/X510UQAS310.zip) | :heavy_check_mark: 
 MacOS | [**11.0 (20A5354i)**](https://developer.apple.com/macos/) | :heavy_check_mark:
-OpenCore | [**0.6.0**](https://github.com/acidanthera/OpenCorePkg) | :heavy_check_mark:
+OpenCore | [**0.6.1**](https://github.com/acidanthera/OpenCorePkg) | :heavy_check_mark:
 
 # Asus Other Models 
+
+For stability, user are adviced to use **whatnameisit** EFI file. 
 
 Hackintosh  | Details | Clover | OpenCore | Maintainer link
 ------------ | ------------- | ------------- | ------------- | ------------- 
@@ -28,43 +30,7 @@ S510UA/F510UA | ***With*** KB Light and dGPU version | :heavy_check_mark: | :x: 
 X510UA-BQ490 | ***No*** KB light and dGPU version | :heavy_check_mark: | :heavy_check_mark: | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
 # SSDT Patch
-
-There are two version of EFI, **OpenCore-Minimal** and **OC-Beta**. The table below shows the difference between both. 
-
-:heavy_check_mark:= *Available in ACPI folder* 
-
-:x:= *Removed from ACPI folder/ patch included in general SSDT*
-
-SSDT | Details | OC-Beta | Minimal 
------------- | ------------- | ------------- | -------------
-[SSDT-APSS.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-APSS.aml) | APSS to APXX | :heavy_check_mark: | :x: 
-[SSDT-FAN-MOD.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-FAN-MOD.aml) | CPU Fan mod | :heavy_check_mark: | :heavy_check_mark:
-[SSDT-FBST.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-FBST.aml) | Battery FBST patch | :heavy_check_mark: | :heavy_check_mark: 
-[SSDT-HPET.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-HPET.aml) | HPET patch | :heavy_check_mark: | :x: 
-[SSDT-I2C1_USTP.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-I2C1_USTP.aml) | Touchpad patch | :heavy_check_mark: | :x: 
-[SSDT-MATHLDR2_STA.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-MATHLDR2_STA.aml) | Enable MATH and LDR2 | :heavy_check_mark: | :x: 
-[SSDT-MEM2.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-MEM2.aml) | MEM2 patch | :heavy_check_mark: | :x: 
-[SSDT-NoHybGfx.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-NoHybGfx.aml) | Disable dGPU patch (**Big Sur ONLY**)* | :heavy_check_mark: | :x: 
-[SSDT-OSYS.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-OSYS.aml) | OS patch | :heavy_check_mark: | :x: 
-[SSDT-PLUG.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-PLUG.aml) | XCPM patch | :heavy_check_mark: | :heavy_check_mark: 
-[SSDT-PS2.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/ACPI/SSDT-PS2.aml) | Keyboard mappinng | :heavy_check_mark: | :x: 
-[SSDT-USBX.aml](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Big-Sur/OC-Beta/EFI/OC/ACPI/SSDT-USBX.aml) | USB Power | :heavy_check_mark: | :x: 
-SSDT-X510UQ.aml | General SSDT | :heavy_check_mark: | :heavy_check_mark:   
-
 For SSDT-NoHybGfx dsl patch, [refer to ACPI folder.](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/ACPI%20/SSDT-NoHybGfx.dsl)
-
-## SSDT-PLUG
-
-The purpose of SSDT-PLUG is to allow the kernel's XCPM(XNU's CPU Power Management) to manage our CPU's power management. 
-
-**OC-Beta** uses default SSDT-PLUG and **OC-Minimal** uses *Balance Power (0x80)* SSDT-PLUG. 
-
-SSDT Name | Details | Link
------------- | ------------- | -------------
-SSDT-PLUG | Performance Mode= 0x00-0x3F | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/SSDT-PLUG/Max%20Performance/SSDT-PLUG.aml)
-SSDT-PLUG | Balance Performance= 0x40-0x7F | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/SSDT-PLUG/Balance%20Performance/SSDT-PLUG.aml)
-SSDT-PLUG | Balance Power = 0x80-0xBF | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/SSDT-PLUG/Balance%20Power%20saving/SSDT-PLUG.aml)
-SSDT-PLUG | Default | [GitHub](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/SSDT-PLUG/Default/SSDT-PLUG.aml)
 
 # CFG Lock Offset
 CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
