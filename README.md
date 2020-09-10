@@ -6,19 +6,20 @@
 
 Device | Details | status | Comment
 ------------ | ------------- | ------------- | -------------
-CPU | [**Intel Core i5-7200U**](https://ark.intel.com/content/www/us/en/ark/products/95443/intel-core-i5-7200u-processor-3m-cache-up-to-3-10-ghz.html) | :heavy_check_mark: |
+CPU | [**Intel Core i5-7200U**](https://ark.intel.com/content/www/us/en/ark/products/95443/intel-core-i5-7200u-processor-3m-cache-up-to-3-10-ghz.html) | Working | 
 Graphic | Intel UHD620 | Working |
 Card Reader | Realtek RTL8411B_RTS5226_RTS5227 | Working |
 Camera | ASUS UVC HD | Working |
 Audio | Conexant Audio CX8050 | Working |
-Battery | B31N1637 42Wh | Working |
+Battery | B31N1637 42Wh | Working | 
 Touchpad | ELAN1300 | Working |
 Wifi | Intel Wireless-AC 8265 | Unsupported | Replaced with *BCM94352Z* 
 Discrete Graphic | Nvidia GeForce 940MX | Unsupported | Disabled with *NoHybGfx*
 Fingerprint | ELAN EFSA96SA-H700Z | Unsupported | Disabled with *NoTouchID kext*
-Bios | [**310**](https://dlcdnets.asus.com/pub/ASUS/nb/X510UQ/X510UQAS310.zip) | Compatible 
-MacOS | [**11.0 (20A5364e)**](https://developer.apple.com/macos/) | Compatible | Updated
-OpenCore | [**0.6.1**](https://github.com/acidanthera/OpenCorePkg) | Compatible | Updated 
+Bios | [**310**](https://dlcdnets.asus.com/pub/ASUS/nb/X510UQ/X510UQAS310.zip) | Compatible | Disabled CFG
+MacOS | [**11.0 (20A5364e)**](https://developer.apple.com/macos/) | Compatible | Tested on latest beta
+OpenCore | [**0.6.1**](https://github.com/acidanthera/OpenCorePkg) | Compatible | Updated to 0.6.1
+
 
 # Asus Other Models 
 
