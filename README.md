@@ -36,18 +36,17 @@ X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Supported | Support
 
 # Changelog
 
-Drop support for Clover, Fully using OpenCore. 
-
+    Sept 11, 2020
+    Added back NoHybGfx (Accidentally left behind) 
+    Clean Up X510UQ SSDT patch 
+    Updated Config 
+    
+    Sept 10, 2020
     Updated to latest OC and Kexts. 
     Removed Two EFI folder from git 
     Minimised ACPI patch
     Changed System Product name to MacBookPro15,1
     Revert changes that causes kernel panic when rebuild kext cache.
-
-# DGPU Disable on MacOS 10/ 11
-If you use the machine for dual OS (Windows+ macOS), you are advised to use Spoof-SSDT [(refer to Dortania OpenCore Guide)](https://dortania.github.io/OpenCore-Install-Guide/extras/spoof.html#windows-gpu-selection) and disable/ delete SSDT-NoHybGfx.aml
-
-if use MacOS only, SSDT-NoHybGfx.aml patch is included. [refer to ACPI folder.](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/ACPI%20/SSDT-NoHybGfx.dsl)
 
 # CFG Lock Offset
 CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 

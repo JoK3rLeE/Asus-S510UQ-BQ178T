@@ -8,7 +8,15 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string></string>
+				<string>CPU DATA</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-DATA.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ASUS FAN MOD</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -16,7 +24,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string></string>
+				<string>BATTERY FIX</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -24,7 +32,15 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string></string>
+				<string>Disable dGPUs</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-NoHybGfx.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>XCPM Fix</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -32,7 +48,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string></string>
+				<string>General ACPI</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
