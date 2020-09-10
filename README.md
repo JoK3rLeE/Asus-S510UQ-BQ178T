@@ -33,6 +33,7 @@ X510UA-BQ490 | ***No*** KB light and dGPU version | Supported | Supported | [wha
 # Changelog
 
 Drop support for Clover, Fully using OpenCore. 
+
     Updated to latest OC and Kexts. 
     Removed Two EFI folder from git 
     Minimised ACPI patch
