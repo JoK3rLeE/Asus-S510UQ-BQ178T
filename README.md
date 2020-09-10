@@ -4,6 +4,10 @@
 
 # Specification
 
+<p align="center">
+<img src="https://www.asus.com/media/global/products/zSh0eyO9fvBbAZHv/P_setting_fff_1_90_end_500.png")
+    </p>
+
 Device | Details | status | Comment
 ------------ | ------------- | ------------- | -------------
 CPU | [**Intel Core i5-7200U**](https://ark.intel.com/content/www/us/en/ark/products/95443/intel-core-i5-7200u-processor-3m-cache-up-to-3-10-ghz.html) | Working | 
@@ -28,7 +32,7 @@ For stability, user are adviced to use **whatnameisit** EFI file.
 Hackintosh  | Details | Clover | OpenCore | Maintainer link
 ------------ | ------------- | ------------- | ------------- | ------------- 
 S510UA/F510UA | ***With*** KB Light and dGPU version | Supported | - | [tctien342](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh)
-X510UA-BQ490 | ***No*** KB light and dGPU version | Supported | Supported | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Supported | Supported | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
 # Changelog
 
@@ -40,8 +44,10 @@ Drop support for Clover, Fully using OpenCore.
     Changed System Product name to MacBookPro15,1
     Revert changes that causes kernel panic when rebuild kext cache.
 
-# SSDT Patch
-For SSDT-NoHybGfx dsl patch, [refer to ACPI folder.](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/ACPI%20/SSDT-NoHybGfx.dsl)
+# DGPU Disable on MacOS 10/ 11
+If you use the machine for dual OS (Windows+ macOS), you are advised to use Spoof-SSDT [(refer to Dortania OpenCore Guide)](https://dortania.github.io/OpenCore-Install-Guide/extras/spoof.html#windows-gpu-selection) and disable/ delete SSDT-NoHybGfx.aml
+
+if use MacOS only, SSDT-NoHybGfx.aml patch is included. [refer to ACPI folder.](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/blob/Big-Sur/ACPI%20/SSDT-NoHybGfx.dsl)
 
 # CFG Lock Offset
 CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
@@ -53,7 +59,7 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 
 [Hackintool](https://github.com/headkaze/Hackintool)
 
-[MaciASL](https://bitbucket.org/RehabMan/os-x-maciasl-patchmatic/downloads/) 
+[MaciASL](https://github.com/acidanthera/MaciASL) 
 
 [IORegistryExplorer](https://github.com/vulgo/IORegistryExplorer) 
 
