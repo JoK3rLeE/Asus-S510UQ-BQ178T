@@ -8,14 +8,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>CPU DATA</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-DATA.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>ASUS FAN MOD</string>
 				<key>Enabled</key>
 				<true/>
@@ -40,7 +32,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>XCPM Fix</string>
+				<string>XCPM Power Management</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
