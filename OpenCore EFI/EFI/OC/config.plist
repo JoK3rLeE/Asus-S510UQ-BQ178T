@@ -8,19 +8,11 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>ASUS FAN MOD</string>
+				<string>Asus Fan Mod </string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-FAN-MOD.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>BATTERY FIX</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-FBST.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -40,7 +32,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>General ACPI</string>
+				<string>Device Properties</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
