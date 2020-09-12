@@ -36,17 +36,29 @@ X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Supported | Support
 
 # Changelog
 
+    Sept 13, 2020
+    1.Revert back to MacBook14,1 for several reasons: 
+        I.HDMI Output not working, but works on 14,1 config
+       II.Battery performance weak compared to MacBookPro15,1 config
+      III.CPU Temperature always higher than MacBook14,1 config
+    2.All the necessary SSDT patches merged into SSDT-macos.aml such as:
+        I.Battery BIX+FBST patch
+       II.Disable dGPU patch
+      III.MEM2 patch
+       IV.FAN MOD patch
+    
+    
     Sept 11, 2020
-    Added back NoHybGfx (Accidentally left behind) 
-    Clean Up X510UQ SSDT patch 
-    Updated Config 
+    1.Added back NoHybGfx (Accidentally left behind) 
+    2.Clean Up X510UQ SSDT patch 
+    3.Updated Config 
     
     Sept 10, 2020
-    Updated to latest OC and Kexts. 
-    Removed Two EFI folder from git 
-    Minimised ACPI patch
-    Changed System Product name to MacBookPro15,1
-    Revert changes that causes kernel panic when rebuild kext cache.
+    1.Updated to latest OC and Kexts. 
+    2.Removed Two EFI folder from git 
+    3.Minimised ACPI patch
+    4.Changed System Product name to MacBookPro15,1
+    5.Revert changes that causes kernel panic when rebuild kext cache.
 
 # CFG Lock Offset
 CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
