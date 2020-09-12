@@ -41,13 +41,13 @@ X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Supported | Support
         I.HDMI Output not working, but works on 14,1 config
        II.Battery performance weak compared to MacBookPro15,1 config
       III.CPU Temperature always higher than MacBook14,1 config
+      
     2.All the necessary SSDT patches merged into SSDT-macos.aml such as:
         I.Battery BIX+FBST patch
        II.Disable dGPU patch
       III.MEM2 patch
        IV.FAN MOD patch
-    
-    
+       
     Sept 11, 2020
     1.Added back NoHybGfx (Accidentally left behind) 
     2.Clean Up X510UQ SSDT patch 
