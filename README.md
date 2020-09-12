@@ -34,7 +34,6 @@ Hackintosh  | Details | Clover | OpenCore | Maintainer link
 S510UA/F510UA | ***With*** KB Light and dGPU version | Supported | - | [tctien342](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh)
 X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Supported | Supported | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
-<<<<<<< HEAD
 ## Changelog
 
 **Sept 13, 2020**
@@ -53,26 +52,6 @@ X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Supported | Support
 - Added back NoHybGfx (Accidentally left behind) 
 - Clean Up X510UQ SSDT patch 
 - Updated Config 
-=======
-# Changelog
-
-    Sept 13, 2020
-    1.Revert back to MacBook14,1 for several reasons: 
-        I.HDMI Output not working, but works on 14,1 config
-       II.Battery performance weak compared to MacBookPro15,1 config
-      III.CPU Temperature always higher than MacBook14,1 config
-      
-    2.All the necessary SSDT patches merged into SSDT-macos.aml such as:
-        I.Battery BIX+FBST patch
-       II.Disable dGPU patch
-      III.MEM2 patch
-       IV.FAN MOD patch
-       
-    Sept 11, 2020
-    1.Added back NoHybGfx (Accidentally left behind) 
-    2.Clean Up X510UQ SSDT patch 
-    3.Updated Config 
->>>>>>> 53b3a8212e1a608957c1543746a4b7cc05a2dabd
     
 **Sept 10, 2020**
 - Updated to latest OC and Kexts. 
