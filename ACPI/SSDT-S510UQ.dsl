@@ -5,20 +5,20 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLzbaDQq.aml, Mon Sep 14 03:29:08 2020
+ * Disassembly of iASLxIbtTJ.aml, Sun Sep 13 03:09:47 2020
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x0000214E (8526)
+ *     Length           0x000026B6 (9910)
  *     Revision         0x02
- *     Checksum         0xF1
+ *     Checksum         0x58
  *     OEM ID           "hack"
- *     OEM Table ID     "PCI0"
+ *     OEM Table ID     "X510UQ"
  *     OEM Revision     0x00000000 (0)
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20200528 (538969384)
  */
-DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
 {
     External (_SB_.ATKD, DeviceObj)
     External (_SB_.ATKD.XANE, MethodObj)    // 1 Arguments
@@ -56,6 +56,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
     External (_SB_.PCI0.LPCB.EC0_.DAT0, FieldUnitObj)
     External (_SB_.PCI0.LPCB.EC0_.EB0S, FieldUnitObj)
     External (_SB_.PCI0.LPCB.EC0_.ECAV, MethodObj)    // 0 Arguments
+    External (_SB_.PCI0.LPCB.EC0_.ECPU, FieldUnitObj)
     External (_SB_.PCI0.LPCB.EC0_.GBTT, MethodObj)    // 1 Arguments
     External (_SB_.PCI0.LPCB.EC0_.MUEC, MutexObj)
     External (_SB_.PCI0.LPCB.EC0_.PRTC, FieldUnitObj)
@@ -66,7 +67,12 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
     External (_SB_.PCI0.LPCB.EC0_.RDWD, IntObj)
     External (_SB_.PCI0.LPCB.EC0_.SBBY, IntObj)
     External (_SB_.PCI0.LPCB.EC0_.SDBT, IntObj)
+    External (_SB_.PCI0.LPCB.EC0_.ST83, MethodObj)    // 1 Arguments
+    External (_SB_.PCI0.LPCB.EC0_.ST98, MethodObj)    // 1 Arguments
+    External (_SB_.PCI0.LPCB.EC0_.ST9E, MethodObj)    // 3 Arguments
     External (_SB_.PCI0.LPCB.EC0_.SWTC, MethodObj)    // 1 Arguments
+    External (_SB_.PCI0.LPCB.EC0_.TACH, MethodObj)    // 1 Arguments
+    External (_SB_.PCI0.LPCB.EC0_.WRAM, MethodObj)    // 2 Arguments
     External (_SB_.PCI0.LPCB.EC0_.WRBL, IntObj)
     External (_SB_.PCI0.LPCB.EC0_.WRBT, IntObj)
     External (_SB_.PCI0.LPCB.EC0_.WRQK, IntObj)
@@ -92,6 +98,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
     External (RMCF.GRAN, IntObj)
     External (RMCF.LEVW, IntObj)
     External (RMCF.LMAX, IntObj)
+    External (XPRW, MethodObj)    // 2 Arguments
 
     If (_OSI ("Darwin"))
     {
@@ -100,51 +107,93 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
             Return ((Arg0 | (Arg1 << 0x08)))
         }
 
-        Scope (_SB.ATKD)
+        Method (GPRW, 2, NotSerialized)
         {
             If (_OSI ("Darwin"))
             {
-                Name (DMES, One)
+                If ((0x6D == Arg0))
+                {
+                    Return (Package (0x02)
+                    {
+                        0x6D, 
+                        Zero
+                    })
+                }
             }
 
-            Method (IANE, 1, NotSerialized)
+            Return (XPRW (Arg0, Arg1))
+        }
+
+        Device (ANKD)
+        {
+            Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 If (_OSI ("Darwin"))
                 {
-                    Notify (ATKD, Arg0)
+                    Return (0x0F)
+                }
+
+                Return (Zero)
+            }
+
+            Name (_HID, "ANKD0000")  // _HID: Hardware ID
+            Name (UCFC, One)
+        }
+
+        Device (NHG1)
+        {
+            Name (_HID, "NHG10000")  // _HID: Hardware ID
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                If (_OSI ("Darwin"))
+                {
+                    Return (0x0F)
                 }
                 Else
                 {
-                    \_SB.ATKD.XANE (Arg0)
+                    Return (Zero)
                 }
             }
 
-            If (_OSI ("Darwin"))
+            Method (_INI, 0, NotSerialized)  // _INI: Initialize
             {
-                Method (ALSS, 0, NotSerialized)
+                If (_OSI ("Darwin"))
                 {
-                    Return (^^ALS0._ALI) /* \_SB_.ALS0._ALI */
+                    If ((CondRefOf (\_SB.PCI0.PEG0.PEGP._DSM) && CondRefOf (\_SB.PCI0.PEG0.PEGP._PS3)))
+                    {
+                        \_SB.PCI0.PEG0.PEGP._DSM (ToUUID ("a486d8f8-0bda-471b-a72b-6042a6b5bee0"), 0x0100, 0x1A, Buffer (0x04)
+                            {
+                                 0x01, 0x00, 0x00, 0x03                           // ....
+                            })
+                        \_SB.PCI0.PEG0.PEGP._PS3 ()
+                    }
                 }
-
-                Method (ALSC, 1, NotSerialized)
+                Else
                 {
                 }
             }
         }
 
-        Device (_SB.ALS0)
+        Device (MEM2)
         {
-            Name (_HID, "ACPI0008" /* Ambient Light Sensor Device */)  // _HID: Hardware ID
-            Name (_CID, "smc-als")  // _CID: Compatible ID
-            Name (_ALI, 0x96)  // _ALI: Ambient Light Illuminance
-            Name (_ALR, Package (0x01)  // _ALR: Ambient Light Response
+            Name (_HID, EisaId ("PNP0C01") /* System Board */)  // _HID: Hardware ID
+            Name (_UID, 0x02)  // _UID: Unique ID
+            Name (CRS, ResourceTemplate ()
             {
-                Package (0x02)
-                {
-                    0x64, 
-                    0x96
-                }
+                Memory32Fixed (ReadWrite,
+                    0x20000000,         // Address Base
+                    0x00200000,         // Address Length
+                    )
+                Memory32Fixed (ReadWrite,
+                    0x40000000,         // Address Base
+                    0x00200000,         // Address Length
+                    )
             })
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Return (CRS) /* \MEM2.CRS_ */
+            }
+
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 If (_OSI ("Darwin"))
@@ -158,129 +207,214 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
             }
         }
 
-        Device (_SB.PCI0.LPCB.DMAC)
+        Device (SMCD)
         {
-            Name (_HID, EisaId ("PNP0200") /* PC-class DMA Controller */)  // _HID: Hardware ID
-            Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
-            {
-                IO (Decode16,
-                    0x0000,             // Range Minimum
-                    0x0000,             // Range Maximum
-                    0x01,               // Alignment
-                    0x20,               // Length
-                    )
-                IO (Decode16,
-                    0x0081,             // Range Minimum
-                    0x0081,             // Range Maximum
-                    0x01,               // Alignment
-                    0x11,               // Length
-                    )
-                IO (Decode16,
-                    0x0093,             // Range Minimum
-                    0x0093,             // Range Maximum
-                    0x01,               // Alignment
-                    0x0D,               // Length
-                    )
-                IO (Decode16,
-                    0x00C0,             // Range Minimum
-                    0x00C0,             // Range Maximum
-                    0x01,               // Alignment
-                    0x20,               // Length
-                    )
-                DMA (Compatibility, NotBusMaster, Transfer8_16, )
-                    {4}
-            })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 If (_OSI ("Darwin"))
                 {
                     Return (0x0F)
                 }
+
+                Return (Zero)
+            }
+
+            Name (_HID, "FAN00000")  // _HID: Hardware ID
+            Name (TACH, Package (0x02)
+            {
+                "System Fan", 
+                "FAN0"
+            })
+            Name (TEMP, Package (0x02)
+            {
+                "CPU Heatsink", 
+                "TCPU"
+            })
+            Method (FAN0, 0, NotSerialized)
+            {
+                If (\_SB.PCI0.LPCB.EC0.ECAV ())
+                {
+                    Local0 = \_SB.PCI0.LPCB.EC0.ST83 (Zero)
+                    If ((Local0 == 0xFF))
+                    {
+                        Return (Local0)
+                    }
+
+                    Local0 = \_SB.PCI0.LPCB.EC0.TACH (Zero)
+                }
                 Else
+                {
+                    Local0 = Zero
+                }
+
+                Return (Local0)
+            }
+
+            Method (TCPU, 0, NotSerialized)
+            {
+                If (\_SB.PCI0.LPCB.EC0.ECAV ())
+                {
+                    Local0 = \_SB.PCI0.LPCB.EC0.ECPU /* External reference */
+                    Local1 = 0x3C
+                    If ((Local0 < 0x80))
+                    {
+                        Local1 = Local0
+                    }
+                }
+                Else
+                {
+                    Local1 = Zero
+                }
+
+                Return (Local1)
+            }
+
+            Name (FTA1, Package (0x16)
+            {
+                0x20, 
+                0x21, 
+                0x22, 
+                0x23, 
+                0x24, 
+                0x25, 
+                0x26, 
+                0x27, 
+                0x28, 
+                0x29, 
+                0x2A, 
+                0x2B, 
+                0x2C, 
+                0x2D, 
+                0x2E, 
+                0x2F, 
+                0x30, 
+                0x31, 
+                0x32, 
+                0x33, 
+                0x34, 
+                0xFF
+            })
+            Name (FTA2, Package (0x16)
+            {
+                Zero, 
+                0x0A, 
+                0x14, 
+                0x1E, 
+                0x28, 
+                0x32, 
+                0x3C, 
+                0x46, 
+                0x50, 
+                0x5A, 
+                0x64, 
+                0x6E, 
+                0x78, 
+                0x82, 
+                0x8C, 
+                0xA0, 
+                0xB9, 
+                0xCD, 
+                0xE1, 
+                0xF5, 
+                0xFA, 
+                0xFF
+            })
+            Name (FCTU, 0x02)
+            Name (FCTD, 0x05)
+            Name (FHST, Buffer (0x16)
+            {
+                /* 0000 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+                /* 0008 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+                /* 0010 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00               // ......
+            })
+            Name (FIDX, Zero)
+            Name (FNUM, Zero)
+            Name (FSUM, Zero)
+            Name (FLST, 0xFF)
+            Name (FCNT, Zero)
+            Method (FCPU, 0, NotSerialized)
+            {
+                If ((\ANKD.UCFC == Zero))
                 {
                     Return (Zero)
                 }
+
+                If (!\_SB.PCI0.LPCB.EC0.ECAV ())
+                {
+                    Return (Zero)
+                }
+
+                Local5 = \_SB.PCI0.LPCB.EC0.ECPU /* External reference */
+                If ((Local5 < 0x80))
+                {
+                    Local0 = Local5
+                }
+                Else
+                {
+                    Local0 = 0x3C
+                }
+
+                Local1 = (Local0 + FSUM) /* \SMCD.FSUM */
+                Local2 = FIDX /* \SMCD.FIDX */
+                Local1 -= DerefOf (FHST [Local2])
+                FHST [Local2] = Local0
+                FSUM = Local1
+                Local2++
+                If ((Local2 >= SizeOf (FHST)))
+                {
+                    Local2 = Zero
+                }
+
+                FIDX = Local2
+                Local2 = FNUM /* \SMCD.FNUM */
+                If ((Local2 != SizeOf (FHST)))
+                {
+                    Local2++
+                    FNUM = Local2
+                }
+
+                Local0 = (Local1 / Local2)
+                If ((Local0 > 0xFF))
+                {
+                    Local0 = 0xFF
+                }
+
+                Local2 = Match (FTA1, MGE, Local0, MTR, Zero, Zero)
+                If ((Local2 > FLST))
+                {
+                    Local1 = (Local2 - FLST) /* \SMCD.FLST */
+                    Local4 = FCTU /* \SMCD.FCTU */
+                }
+                Else
+                {
+                    Local1 = (FLST - Local2)
+                    Local4 = FCTD /* \SMCD.FCTD */
+                }
+
+                If (!Local1)
+                {
+                    FCNT = Zero
+                }
+                Else
+                {
+                    Local3 = FCNT /* \SMCD.FCNT */
+                    FCNT++
+                    Local1 = (Local4 / Local1)
+                    If ((Local3 >= Local1))
+                    {
+                        FLST = Local2
+                        \_SB.PCI0.LPCB.EC0.ST98 (DerefOf (FTA2 [Local2]))
+                        FCNT = Zero
+                    }
+                }
+
+                Return (One)
             }
         }
     }
 
     Scope (_SB.PCI0.LPCB.EC0)
     {
-        Method (_Q0A, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            If (_OSI ("Darwin"))
-            {
-                If (\_SB.ATKP)
-                {
-                    \_SB.ATKD.IANE (0x5E)
-                }
-            }
-            Else
-            {
-                \_SB.PCI0.LPCB.EC0.XQ0A ()
-            }
-        }
-
-        Method (_Q0B, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            If (_OSI ("Darwin"))
-            {
-                If (\_SB.ATKP)
-                {
-                    \_SB.ATKD.IANE (0x7D)
-                }
-            }
-            Else
-            {
-                \_SB.PCI0.LPCB.EC0.XQ0B ()
-            }
-        }
-
-        Method (_Q0E, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            If (_OSI ("Darwin"))
-            {
-                If (\_SB.ATKP)
-                {
-                    \_SB.ATKD.IANE (0x20)
-                }
-            }
-            Else
-            {
-                \_SB.PCI0.LPCB.EC0.XQ0E ()
-            }
-        }
-
-        Method (_Q0F, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            If (_OSI ("Darwin"))
-            {
-                If (\_SB.ATKP)
-                {
-                    \_SB.ATKD.IANE (0x10)
-                }
-            }
-            Else
-            {
-                \_SB.PCI0.LPCB.EC0.XQ0F ()
-            }
-        }
-
-        Method (_Q11, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            If (_OSI ("Darwin"))
-            {
-                If (\_SB.ATKP)
-                {
-                    \_SB.ATKD.IANE (0x61)
-                }
-            }
-            Else
-            {
-                \_SB.PCI0.LPCB.EC0.XQ11 ()
-            }
-        }
-
         If (_OSI ("Darwin"))
         {
             OperationRegion (XCOR, EmbeddedControl, Zero, 0xFF)
@@ -803,6 +937,215 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
         }
     }
 
+    Scope (\_SB)
+    {
+        Device (USBX)
+        {
+            Name (_ADR, Zero)  // _ADR: Address
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                If (_OSI ("Darwin"))
+                {
+                    Return (0x0F)
+                }
+
+                Return (Zero)
+            }
+
+            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+            {
+                If (!Arg2)
+                {
+                    Return (Buffer (One)
+                    {
+                         0x03                                             // .
+                    })
+                }
+
+                Return (Package (0x08)
+                {
+                    "kUSBSleepPowerSupply", 
+                    0x13EC, 
+                    "kUSBSleepPortCurrentLimit", 
+                    0x0834, 
+                    "kUSBWakePowerSupply", 
+                    0x13EC, 
+                    "kUSBWakePortCurrentLimit", 
+                    0x0834
+                })
+            }
+        }
+    }
+
+    Device (_SB.ALS0)
+    {
+        Name (_HID, "ACPI0008" /* Ambient Light Sensor Device */)  // _HID: Hardware ID
+        Name (_CID, "smc-als")  // _CID: Compatible ID
+        Name (_ALI, 0x96)  // _ALI: Ambient Light Illuminance
+        Name (_ALR, Package (0x01)  // _ALR: Ambient Light Response
+        {
+            Package (0x02)
+            {
+                0x64, 
+                0x96
+            }
+        })
+        Method (_STA, 0, NotSerialized)  // _STA: Status
+        {
+            If (_OSI ("Darwin"))
+            {
+                Return (0x0F)
+            }
+            Else
+            {
+                Return (Zero)
+            }
+        }
+    }
+
+    Scope (_SB.ATKD)
+    {
+        Method (ALSS, 0, NotSerialized)
+        {
+            Return (^^ALS0._ALI) /* \_SB_.ALS0._ALI */
+        }
+
+        Method (ALSC, 1, NotSerialized)
+        {
+        }
+
+        Method (SKBL, 1, NotSerialized)
+        {
+            ^^KBLV = (Arg0 & 0x7F)
+            ^^PCI0.LPCB.EC0.WRAM (0x09F0, ^^KBLV)
+            Local0 = DerefOf (KBPW [^^KBLV])
+            ^^PCI0.LPCB.EC0.ST9E (0x1F, 0xFF, Local0)
+            Return (Arg0)
+        }
+
+        Method (SKBV, 1, NotSerialized)
+        {
+            ^^KBLV = (Arg0 / 0x10)
+            ^^PCI0.LPCB.EC0.WRAM (0x09F0, ^^KBLV)
+            ^^PCI0.LPCB.EC0.ST9E (0x1F, 0xFF, Arg0)
+            Return (Arg0)
+        }
+
+        Name (KBPW, Buffer (0x11)
+        {
+            /* 0000 */  0x00, 0x10, 0x20, 0x30, 0x40, 0x50, 0x60, 0x70,  // .. 0@P`p
+            /* 0008 */  0x80, 0x90, 0xA0, 0xB0, 0xC0, 0xD0, 0xE0, 0xF0,  // ........
+            /* 0010 */  0xFF                                             // .
+        })
+        Method (GKBL, 1, NotSerialized)
+        {
+            Return (^^KBLV) /* External reference */
+        }
+
+        If (_OSI ("Darwin"))
+        {
+            Name (DMES, One)
+        }
+
+        Method (IANE, 1, NotSerialized)
+        {
+            If (_OSI ("Darwin"))
+            {
+                Notify (ATKD, Arg0)
+            }
+            Else
+            {
+                \_SB.ATKD.XANE (Arg0)
+            }
+        }
+    }
+
+    Scope (_SB.PCI0.I2C1)
+    {
+        If (_OSI ("Darwin"))
+        {
+            Name (USTP, One)
+        }
+    }
+
+    Scope (_SB.PCI0.LPCB.EC0)
+    {
+        Method (_Q0A, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            If (_OSI ("Darwin"))
+            {
+                If (\_SB.ATKP)
+                {
+                    \_SB.ATKD.IANE (0x5E)
+                }
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.EC0.XQ0A ()
+            }
+        }
+
+        Method (_Q0B, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            If (_OSI ("Darwin"))
+            {
+                If (\_SB.ATKP)
+                {
+                    \_SB.ATKD.IANE (0x7D)
+                }
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.EC0.XQ0B ()
+            }
+        }
+
+        Method (_Q0E, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            If (_OSI ("Darwin"))
+            {
+                If (\_SB.ATKP)
+                {
+                    \_SB.ATKD.IANE (0x20)
+                }
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.EC0.XQ0E ()
+            }
+        }
+
+        Method (_Q0F, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            If (_OSI ("Darwin"))
+            {
+                If (\_SB.ATKP)
+                {
+                    \_SB.ATKD.IANE (0x10)
+                }
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.EC0.XQ0F ()
+            }
+        }
+
+        Method (_Q11, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            If (_OSI ("Darwin"))
+            {
+                If (\_SB.ATKP)
+                {
+                    \_SB.ATKD.IANE (0x61)
+                }
+            }
+            Else
+            {
+                \_SB.PCI0.LPCB.EC0.XQ11 ()
+            }
+        }
+    }
+
     Scope (_SB.PCI0.GFX0)
     {
         OperationRegion (RMP3, PCI_Config, Zero, 0x14)
@@ -1073,28 +1416,9 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
         }
     }
 
-    Scope (_SB.PCI0.LPCB.HPET)
+    Device (_SB.PCI0.PMCR)
     {
-        Method (_INI, 0, NotSerialized)  // _INI: Initialize
-        {
-            If (_OSI ("Darwin"))
-            {
-                HPTE = Zero
-            }
-        }
-    }
-
-    Scope (_SB.PCI0.I2C1)
-    {
-        If (_OSI ("Darwin"))
-        {
-            Name (USTP, One)
-        }
-    }
-
-    Device (_SB.PCI0.LPCB.EC)
-    {
-        Name (_HID, "ACID0001")  // _HID: Hardware ID
+        Name (_ADR, 0x001F0002)  // _ADR: Address
         Method (_STA, 0, NotSerialized)  // _STA: Status
         {
             If (_OSI ("Darwin"))
@@ -1124,9 +1448,38 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
         }
     }
 
-    Device (_SB.PCI0.PMCR)
+    Device (_SB.PCI0.LPCB.DMAC)
     {
-        Name (_ADR, 0x001F0002)  // _ADR: Address
+        Name (_HID, EisaId ("PNP0200") /* PC-class DMA Controller */)  // _HID: Hardware ID
+        Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
+        {
+            IO (Decode16,
+                0x0000,             // Range Minimum
+                0x0000,             // Range Maximum
+                0x01,               // Alignment
+                0x20,               // Length
+                )
+            IO (Decode16,
+                0x0081,             // Range Minimum
+                0x0081,             // Range Maximum
+                0x01,               // Alignment
+                0x11,               // Length
+                )
+            IO (Decode16,
+                0x0093,             // Range Minimum
+                0x0093,             // Range Maximum
+                0x01,               // Alignment
+                0x0D,               // Length
+                )
+            IO (Decode16,
+                0x00C0,             // Range Minimum
+                0x00C0,             // Range Maximum
+                0x01,               // Alignment
+                0x20,               // Length
+                )
+            DMA (Compatibility, NotBusMaster, Transfer8_16, )
+                {4}
+        })
         Method (_STA, 0, NotSerialized)  // _STA: Status
         {
             If (_OSI ("Darwin"))
@@ -1140,36 +1493,13 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
         }
     }
 
-    Device (NHG1)
+    Scope (_SB.PCI0.LPCB.HPET)
     {
-        Name (_HID, "NHG10000")  // _HID: Hardware ID
-        Method (_STA, 0, NotSerialized)  // _STA: Status
-        {
-            If (_OSI ("Darwin"))
-            {
-                Return (0x0F)
-            }
-            Else
-            {
-                Return (Zero)
-            }
-        }
-
         Method (_INI, 0, NotSerialized)  // _INI: Initialize
         {
             If (_OSI ("Darwin"))
             {
-                If ((CondRefOf (\_SB.PCI0.PEG0.PEGP._DSM) && CondRefOf (\_SB.PCI0.PEG0.PEGP._PS3)))
-                {
-                    \_SB.PCI0.PEG0.PEGP._DSM (ToUUID ("a486d8f8-0bda-471b-a72b-6042a6b5bee0"), 0x0100, 0x1A, Buffer (0x04)
-                        {
-                             0x01, 0x00, 0x00, 0x03                           // ....
-                        })
-                    \_SB.PCI0.PEG0.PEGP._PS3 ()
-                }
-            }
-            Else
-            {
+                HPTE = Zero
             }
         }
     }
@@ -1178,18 +1508,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
     {
         Name (_CID, "smbus")  // _CID: Compatible ID
         Name (_ADR, Zero)  // _ADR: Address
-        Method (_STA, 0, NotSerialized)  // _STA: Status
-        {
-            If (_OSI ("Darwin"))
-            {
-                Return (0x0F)
-            }
-            Else
-            {
-                Return (Zero)
-            }
-        }
-
         Device (DVL0)
         {
             Name (_ADR, 0x57)  // _ADR: Address
@@ -1209,6 +1527,32 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
                     "address", 
                     0x57
                 })
+            }
+        }
+
+        Method (_STA, 0, NotSerialized)  // _STA: Status
+        {
+            If (_OSI ("Darwin"))
+            {
+                Return (0x0F)
+            }
+
+            Return (Zero)
+        }
+    }
+
+    Device (_SB.PCI0.LPCB.EC)
+    {
+        Name (_HID, "ACID0001")  // _HID: Hardware ID
+        Method (_STA, 0, NotSerialized)  // _STA: Status
+        {
+            If (_OSI ("Darwin"))
+            {
+                Return (0x0F)
+            }
+            Else
+            {
+                Return (Zero)
             }
         }
     }
