@@ -12,13 +12,13 @@
  *     Length           0x0000214E (8526)
  *     Revision         0x02
  *     Checksum         0xF1
- *     OEM ID           "what"
- *     OEM Table ID     "X510UA"
+ *     OEM ID           "hack"
+ *     OEM Table ID     "PCI0"
  *     OEM Revision     0x00000000 (0)
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20200528 (538969384)
  */
-DefinitionBlock ("", "SSDT", 2, "what", "X510UA", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "hack", "PCI0", 0x00000000)
 {
     External (_SB_.ATKD, DeviceObj)
     External (_SB_.ATKD.XANE, MethodObj)    // 1 Arguments

@@ -13,12 +13,12 @@
  *     Revision         0x02
  *     Checksum         0x74
  *     OEM ID           "hack"
- *     OEM Table ID     "X510UQ"
+ *     OEM Table ID     "patch"
  *     OEM Revision     0x00000000 (0)
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20200528 (538969384)
  */
-DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "hack", "patch", 0x00000000)
 {
     External (_SB_.PCI0.LPCB.EC0_.ECAV, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.LPCB.EC0_.ECPU, FieldUnitObj)
