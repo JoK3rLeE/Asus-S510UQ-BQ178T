@@ -1025,7 +1025,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
 
         Method (SKBV, 1, NotSerialized)
         {
-            ^^KBLV = (Arg0 / 0x10)
             ^^PCI0.LPCB.EC0.WRAM (0x09F0, ^^KBLV)
             ^^PCI0.LPCB.EC0.ST9E (0x1F, 0xFF, Arg0)
             Return (Arg0)
