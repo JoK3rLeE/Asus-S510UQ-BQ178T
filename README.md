@@ -36,17 +36,22 @@ X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Supported | Support
 
 ## Changelog
 
+**Sept 15, 2020**
+- Update AsusSMC and DSDT Patch based on hieplpvip guide. 
+
+**Sept 14, 2020**
+- Update DSDT Patch for missing PCI0 
+
 **Sept 13, 2020**
 - Revert back to MacBook14,1 for several reasons: 
 1. HDMI Output not working, but works on 14,1 config
-2. Battery performance weak compared to MacBookPro15,1 config
+2. Poor battery performance compared to MacBookPro14,1 config
 3. CPU Temperature always higher than MacBook14,1 config
-- All the necessary SSDT patches merged into SSDT-macos.aml such as:
+- All the necessary SSDT patches merged into SSDT-S510UQ.aml such as:
 1. Battery BIX+FBST patch
 2. Disable dGPU patch
 3. MEM2 patch
 4. FAN MOD patch
-    
     
 **Sept 11, 2020**
 - Added back NoHybGfx (Accidentally left behind) 
@@ -54,7 +59,7 @@ X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Supported | Support
 - Updated Config 
     
 **Sept 10, 2020**
-- Updated to latest OC and Kexts. 
+- Updated to latest OC (0.6.1). 
 - Removed Two EFI folder from git 
 - Minimised ACPI patch
 - Changed System Product name to MacBookPro15,1
