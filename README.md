@@ -1,7 +1,3 @@
-<p align="center">
-<img src="https://i.imgur.com/piJu4XY.png")
-    </p>
-
 # Specification
 
 Device | Details | status | Comment
@@ -38,8 +34,6 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 ## Changelog
 
 **Sept 28, 2020**
-- ~~Added MacBookPro15,2 config with working HDMI (tested)~~ 
-- ~~Added MacBookPro14,1 config as a choice for user.~~ 
 - Removed *MacBookPro14,1 & MacBookPro15,2* config and set **MacBookPro15,4** as default config.
 - **Temporary suspend update from now until my LCD get fix.** 
 
