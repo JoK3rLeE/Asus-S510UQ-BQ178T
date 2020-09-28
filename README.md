@@ -38,9 +38,9 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 ## Changelog
 
 **Sept 28, 2020**
-- Added MacBookPro15,2 config with working HDMI (tested) 
-- Added MacBookPro14,1 config as a choice for user. 
-- Set MacBookPro15,4 as default config. (Previous issue fixed) 
+- ~~Added MacBookPro15,2 config with working HDMI (tested)~~ 
+- ~~Added MacBookPro14,1 config as a choice for user.~~ 
+- Removed MacBookPro14,1 & MacBookPro15,2 config and set MacBookPro15,4 as default config.
 
 **Sept 15, 2020**
 - Update AsusSMC and DSDT Patch based on hieplpvip guide. 
