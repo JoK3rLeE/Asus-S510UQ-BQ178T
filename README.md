@@ -59,6 +59,9 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 - Changed System Product name to MacBookPro15,1
 - Revert changes that causes kernel panic when rebuild kext cache.
     
+## Download Link
+[Github releases](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases)
+
 # Useful tools  
 [Open Core Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/)
 
