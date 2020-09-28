@@ -9,7 +9,7 @@ Camera | ASUS UVC HD | Working |
 Audio | Conexant Audio CX8050 | Working |
 Battery | B31N1637 42Wh | Working | 
 Touchpad | ELAN1300 | Working |
-Wifi | Intel Wireless-AC 8265 | Unsupported | Replaced with *BCM94352Z* 
+Wifi | Intel Wireless-AC 8265 | Supported | Refer to [zxystd git](https://github.com/zxystd) 
 Discrete Graphic | Nvidia GeForce 940MX | Unsupported | Disabled with *NoHybGfx*
 Fingerprint | ELAN EFSA96SA-H700Z | Unsupported | Disabled with *NoTouchID kext*
 Bios | [**310**](https://dlcdnets.asus.com/pub/ASUS/nb/X510UQ/X510UQAS310.zip) | Compatible | Disabled CFG
