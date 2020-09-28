@@ -4,10 +4,6 @@
 
 # Specification
 
-<p align="center">
-<img src="https://www.asus.com/media/global/products/zSh0eyO9fvBbAZHv/P_setting_fff_1_90_end_500.png")
-    </p>
-
 Device | Details | status | Comment
 ------------ | ------------- | ------------- | -------------
 CPU | [**Intel Core i5-7200U**](https://ark.intel.com/content/www/us/en/ark/products/95443/intel-core-i5-7200u-processor-3m-cache-up-to-3-10-ghz.html) | Working | 
@@ -34,7 +30,15 @@ Hackintosh  | Details | Clover | OpenCore | Maintainer link
 S510UA/F510UA | ***With*** KB Light and dGPU version | Supported | - | [tctien342](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh)
 X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Supported | Supported | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
+# CFG Lock Offset
+CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
+
+Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
+
 ## Changelog
+
+**Sept 28, 2020**
+- Added MacBookPro15,2 config with working HDMI (tested) 
 
 **Sept 15, 2020**
 - Update AsusSMC and DSDT Patch based on hieplpvip guide. 
@@ -64,11 +68,6 @@ X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Supported | Support
 - Minimised ACPI patch
 - Changed System Product name to MacBookPro15,1
 - Revert changes that causes kernel panic when rebuild kext cache.
-
-# CFG Lock Offset
-CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable AppleCpuPmCfgLock and AppleXcpmCfgLock in config before boot up the OC. 
-
-Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
     
 # Useful tools  
 [Open Core Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/)
