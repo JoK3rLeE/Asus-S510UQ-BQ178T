@@ -39,6 +39,8 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 
 **Sept 28, 2020**
 - Added MacBookPro15,2 config with working HDMI (tested) 
+- Added MacBookPro14,1 config as a choice for user. 
+- Set MacBookPro15,4 as default config. (Previous issue fixed) 
 
 **Sept 15, 2020**
 - Update AsusSMC and DSDT Patch based on hieplpvip guide. 
@@ -47,18 +49,11 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 - Update DSDT Patch for missing PCI0 
 
 **Sept 13, 2020**
-- Revert back to MacBook14,1 for several reasons: 
-1. HDMI Output not working, but works on 14,1 config
-2. Poor battery performance compared to MacBookPro14,1 config
-3. CPU Temperature always higher than MacBook14,1 config
-- All the necessary SSDT patches merged into SSDT-S510UQ.aml such as:
-1. Battery BIX+FBST patch
-2. Disable dGPU patch
-3. MEM2 patch
-4. FAN MOD patch
+- Revert back to MacBook14,1 as for now. 
+- All the necessary SSDT patches merged into SSDT-S510UQ.aml
     
 **Sept 11, 2020**
-- Added back NoHybGfx (Accidentally left behind) 
+- Added back NoHybGfx
 - Clean Up X510UQ SSDT patch 
 - Updated Config 
     
