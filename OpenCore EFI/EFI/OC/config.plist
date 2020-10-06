@@ -1023,7 +1023,7 @@
 			<key>LapicKernelPanic</key>
 			<false/>
 			<key>PanicNoKextDump</key>
-			<true/>
+			<false/>
 			<key>PowerTimeoutKernelPanic</key>
 			<false/>
 			<key>ThirdPartyDrives</key>
@@ -1159,7 +1159,7 @@
 				<key>SystemAudioVolume</key>
 				<data>gA==</data>
 				<key>boot-args</key>
-				<string>brcmfx-country=US bpr_postresetdelay=400 bpr_initialdelay=400 bpr_probedelay=200 -wegnoegpu -v</string>
+				<string>brcmfx-country=US -wegnoegpu -v</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
