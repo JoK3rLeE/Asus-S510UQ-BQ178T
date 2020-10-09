@@ -12,9 +12,9 @@ Touchpad | ELAN1300 | Working |
 Wifi | Intel Wireless-AC 8265 | Supported | Refer to [zxystd git](https://github.com/zxystd) 
 Discrete Graphic | Nvidia GeForce 940MX | Unsupported | Disabled with *NoHybGfx*
 Fingerprint | ELAN EFSA96SA-H700Z | Unsupported | Disabled with *NoTouchID kext*
-Bios | [**310**](https://dlcdnets.asus.com/pub/ASUS/nb/X510UQ/X510UQAS310.zip) | Compatible | Disabled CFG
-MacOS | [**11.0 (20A5364e)**](https://developer.apple.com/macos/) | Compatible | Tested on latest beta
-OpenCore | [**0.6.1**](https://github.com/acidanthera/OpenCorePkg) | Compatible | Updated to 0.6.1
+Bios | [**310**](https://dlcdnets.asus.com/pub/ASUS/nb/X510UQ/X510UQAS310.zip) | Compatible |
+MacOS | [**11.0 (20A5384c)**](https://developer.apple.com/macos/) | Compatible |
+OpenCore | [**0.6.2**](https://github.com/acidanthera/OpenCorePkg) | Compatible |
 
 
 # Asus Other Models 
@@ -33,9 +33,13 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 
 ## Changelog
 
+**Oct 7, 2020**
+- Update OpenCore to 0.6.2
+- Update Kexts to latest version 
+
 **Sept 28, 2020**
 - Removed *MacBookPro14,1 & MacBookPro15,2* config and set **MacBookPro15,4** as default config.
-- **Temporary suspend update from now until my LCD get fix.** 
+- ~~**Temporary suspend update from now until my LCD get fix.**~~
 
 **Sept 15, 2020**
 - Update AsusSMC and DSDT Patch based on hieplpvip guide. 
