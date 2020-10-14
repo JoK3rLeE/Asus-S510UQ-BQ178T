@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLxIbtTJ.aml, Sun Sep 13 03:09:47 2020
+ * Disassembly of iASLUwKWjX.aml, Thu Oct 15 00:43:59 2020
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x000026B6 (9910)
+ *     Length           0x000026E1 (9953)
  *     Revision         0x02
- *     Checksum         0x58
+ *     Checksum         0x8A
  *     OEM ID           "hack"
  *     OEM Table ID     "X510UQ"
  *     OEM Revision     0x00000000 (0)
@@ -20,6 +20,7 @@
  */
 DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
 {
+    External (_SB_.APXX, FieldUnitObj)
     External (_SB_.ATKD, DeviceObj)
     External (_SB_.ATKD.XANE, MethodObj)    // 1 Arguments
     External (_SB_.ATKP, IntObj)
@@ -98,10 +99,16 @@ DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
     External (RMCF.GRAN, IntObj)
     External (RMCF.LEVW, IntObj)
     External (RMCF.LMAX, IntObj)
+    External (SPTH, IntObj)
     External (XPRW, MethodObj)    // 2 Arguments
 
     If (_OSI ("Darwin"))
     {
+        Method (APSS, 0, NotSerialized)
+        {
+            Return (\_SB.APXX) /* External reference */
+        }
+
         Method (B1B2, 2, NotSerialized)
         {
             Return ((Arg0 | (Arg1 << 0x08)))
@@ -138,73 +145,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
 
             Name (_HID, "ANKD0000")  // _HID: Hardware ID
             Name (UCFC, One)
-        }
-
-        Device (NHG1)
-        {
-            Name (_HID, "NHG10000")  // _HID: Hardware ID
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If (_OSI ("Darwin"))
-                {
-                    Return (0x0F)
-                }
-                Else
-                {
-                    Return (Zero)
-                }
-            }
-
-            Method (_INI, 0, NotSerialized)  // _INI: Initialize
-            {
-                If (_OSI ("Darwin"))
-                {
-                    If ((CondRefOf (\_SB.PCI0.PEG0.PEGP._DSM) && CondRefOf (\_SB.PCI0.PEG0.PEGP._PS3)))
-                    {
-                        \_SB.PCI0.PEG0.PEGP._DSM (ToUUID ("a486d8f8-0bda-471b-a72b-6042a6b5bee0"), 0x0100, 0x1A, Buffer (0x04)
-                            {
-                                 0x01, 0x00, 0x00, 0x03                           // ....
-                            })
-                        \_SB.PCI0.PEG0.PEGP._PS3 ()
-                    }
-                }
-                Else
-                {
-                }
-            }
-        }
-
-        Device (MEM2)
-        {
-            Name (_HID, EisaId ("PNP0C01") /* System Board */)  // _HID: Hardware ID
-            Name (_UID, 0x02)  // _UID: Unique ID
-            Name (CRS, ResourceTemplate ()
-            {
-                Memory32Fixed (ReadWrite,
-                    0x20000000,         // Address Base
-                    0x00200000,         // Address Length
-                    )
-                Memory32Fixed (ReadWrite,
-                    0x40000000,         // Address Base
-                    0x00200000,         // Address Length
-                    )
-            })
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Return (CRS) /* \MEM2.CRS_ */
-            }
-
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If (_OSI ("Darwin"))
-                {
-                    Return (0x0F)
-                }
-                Else
-                {
-                    Return (Zero)
-                }
-            }
         }
 
         Device (SMCD)
@@ -409,6 +349,320 @@ DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
                 }
 
                 Return (One)
+            }
+        }
+
+        Device (NHG1)
+        {
+            Name (_HID, "NHG10000")  // _HID: Hardware ID
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                If (_OSI ("Darwin"))
+                {
+                    Return (0x0F)
+                }
+                Else
+                {
+                    Return (Zero)
+                }
+            }
+
+            Method (_INI, 0, NotSerialized)  // _INI: Initialize
+            {
+                If (_OSI ("Darwin"))
+                {
+                    If ((CondRefOf (\_SB.PCI0.PEG0.PEGP._DSM) && CondRefOf (\_SB.PCI0.PEG0.PEGP._PS3)))
+                    {
+                        \_SB.PCI0.PEG0.PEGP._DSM (ToUUID ("a486d8f8-0bda-471b-a72b-6042a6b5bee0"), 0x0100, 0x1A, Buffer (0x04)
+                            {
+                                 0x01, 0x00, 0x00, 0x03                           // ....
+                            })
+                        \_SB.PCI0.PEG0.PEGP._PS3 ()
+                    }
+                }
+                Else
+                {
+                }
+            }
+        }
+
+        Device (MEM2)
+        {
+            Name (_HID, EisaId ("PNP0C01") /* System Board */)  // _HID: Hardware ID
+            Name (_UID, 0x02)  // _UID: Unique ID
+            Name (CRS, ResourceTemplate ()
+            {
+                Memory32Fixed (ReadWrite,
+                    0x20000000,         // Address Base
+                    0x00200000,         // Address Length
+                    )
+                Memory32Fixed (ReadWrite,
+                    0x40000000,         // Address Base
+                    0x00200000,         // Address Length
+                    )
+            })
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Return (CRS) /* \MEM2.CRS_ */
+            }
+
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                If (_OSI ("Darwin"))
+                {
+                    Return (0x0F)
+                }
+                Else
+                {
+                    Return (Zero)
+                }
+            }
+        }
+
+        Device (UIAC)
+        {
+            Name (_HID, "UIA00000")  // _HID: Hardware ID
+            Name (RMCF, Package (0x02)
+            {
+                "XHC", 
+                Package (0x04)
+                {
+                    "port-count", 
+                    Buffer (0x04)
+                    {
+                         0x0F, 0x00, 0x00, 0x00                           // ....
+                    }, 
+
+                    "ports", 
+                    Package (0x14)
+                    {
+                        "HS01", 
+                        Package (0x06)
+                        {
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "HS01"
+                            }, 
+
+                            "UsbConnector", 
+                            0x03, 
+                            "port", 
+                            Buffer (0x04)
+                            {
+                                 0x01, 0x00, 0x00, 0x00                           // ....
+                            }
+                        }, 
+
+                        "HS02", 
+                        Package (0x06)
+                        {
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "HS02"
+                            }, 
+
+                            "UsbConnector", 
+                            0x0A, 
+                            "port", 
+                            Buffer (0x04)
+                            {
+                                 0x02, 0x00, 0x00, 0x00                           // ....
+                            }
+                        }, 
+
+                        "HS03", 
+                        Package (0x06)
+                        {
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "HS03"
+                            }, 
+
+                            "UsbConnector", 
+                            Zero, 
+                            "port", 
+                            Buffer (0x04)
+                            {
+                                 0x03, 0x00, 0x00, 0x00                           // ....
+                            }
+                        }, 
+
+                        "HS04", 
+                        Package (0x06)
+                        {
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "HS04"
+                            }, 
+
+                            "UsbConnector", 
+                            Zero, 
+                            "port", 
+                            Buffer (0x04)
+                            {
+                                 0x04, 0x00, 0x00, 0x00                           // ....
+                            }
+                        }, 
+
+                        "HS06", 
+                        Package (0x06)
+                        {
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "HS06"
+                            }, 
+
+                            "UsbConnector", 
+                            0xFF, 
+                            "port", 
+                            Buffer (0x04)
+                            {
+                                 0x06, 0x00, 0x00, 0x00                           // ....
+                            }
+                        }, 
+
+                        "HS07", 
+                        Package (0x06)
+                        {
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "HS07"
+                            }, 
+
+                            "UsbConnector", 
+                            Zero, 
+                            "port", 
+                            Buffer (0x04)
+                            {
+                                 0x07, 0x00, 0x00, 0x00                           // ....
+                            }
+                        }, 
+
+                        "HS08", 
+                        Package (0x06)
+                        {
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "HS08"
+                            }, 
+
+                            "UsbConnector", 
+                            0xFF, 
+                            "port", 
+                            Buffer (0x04)
+                            {
+                                 0x08, 0x00, 0x00, 0x00                           // ....
+                            }
+                        }, 
+
+                        "SS01", 
+                        Package (0x06)
+                        {
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "SS01"
+                            }, 
+
+                            "UsbConnector", 
+                            0x03, 
+                            "port", 
+                            Buffer (0x04)
+                            {
+                                 0x0D, 0x00, 0x00, 0x00                           // ....
+                            }
+                        }, 
+
+                        "SS02", 
+                        Package (0x06)
+                        {
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "SS02"
+                            }, 
+
+                            "UsbConnector", 
+                            0x0A, 
+                            "port", 
+                            Buffer (0x04)
+                            {
+                                 0x0E, 0x00, 0x00, 0x00                           // ....
+                            }
+                        }, 
+
+                        "SS03", 
+                        Package (0x06)
+                        {
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "SS03"
+                            }, 
+
+                            "UsbConnector", 
+                            0x0A, 
+                            "port", 
+                            Buffer (0x04)
+                            {
+                                 0x0F, 0x00, 0x00, 0x00                           // ....
+                            }
+                        }
+                    }
+                }
+            })
+        }
+
+        Device (USBX)
+        {
+            Name (_ADR, Zero)  // _ADR: Address
+            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+            {
+                If ((Arg2 == Zero))
+                {
+                    Return (Buffer (One)
+                    {
+                         0x03                                             // .
+                    })
+                }
+
+                Return (Package (0x08)
+                {
+                    "kUSBSleepPowerSupply", 
+                    0x13EC, 
+                    "kUSBSleepPortCurrentLimit", 
+                    0x0834, 
+                    "kUSBWakePowerSupply", 
+                    0x13EC, 
+                    "kUSBWakePortCurrentLimit", 
+                    0x0834
+                })
+            }
+        }
+
+        Scope (\_SB)
+        {
+            Device (EC)
+            {
+                Name (_HID, "ACID0001")  // _HID: Hardware ID
+                Method (_STA, 0, NotSerialized)  // _STA: Status
+                {
+                    If (_OSI ("Darwin"))
+                    {
+                        Return (0x0F)
+                    }
+                    Else
+                    {
+                        Return (Zero)
+                    }
+                }
             }
         }
     }
@@ -937,46 +1191,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
         }
     }
 
-    Scope (\_SB)
-    {
-        Device (USBX)
-        {
-            Name (_ADR, Zero)  // _ADR: Address
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If (_OSI ("Darwin"))
-                {
-                    Return (0x0F)
-                }
-
-                Return (Zero)
-            }
-
-            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-            {
-                If (!Arg2)
-                {
-                    Return (Buffer (One)
-                    {
-                         0x03                                             // .
-                    })
-                }
-
-                Return (Package (0x08)
-                {
-                    "kUSBSleepPowerSupply", 
-                    0x13EC, 
-                    "kUSBSleepPortCurrentLimit", 
-                    0x0834, 
-                    "kUSBWakePowerSupply", 
-                    0x13EC, 
-                    "kUSBWakePortCurrentLimit", 
-                    0x0834
-                })
-            }
-        }
-    }
-
     Device (_SB.ALS0)
     {
         Name (_HID, "ACPI0008" /* Ambient Light Sensor Device */)  // _HID: Hardware ID
@@ -1005,15 +1219,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
 
     Scope (_SB.ATKD)
     {
-        Method (ALSS, 0, NotSerialized)
-        {
-            Return (^^ALS0._ALI) /* \_SB_.ALS0._ALI */
-        }
-
-        Method (ALSC, 1, NotSerialized)
-        {
-        }
-
         Method (SKBL, 1, NotSerialized)
         {
             ^^KBLV = (Arg0 & 0x7F)
@@ -1036,11 +1241,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
             /* 0008 */  0x80, 0x90, 0xA0, 0xB0, 0xC0, 0xD0, 0xE0, 0xF0,  // ........
             /* 0010 */  0xFF                                             // .
         })
-        Method (GKBL, 1, NotSerialized)
-        {
-            Return (^^KBLV) /* External reference */
-        }
-
         If (_OSI ("Darwin"))
         {
             Name (DMES, One)
@@ -1056,14 +1256,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
             {
                 \_SB.ATKD.XANE (Arg0)
             }
-        }
-    }
-
-    Scope (_SB.PCI0.I2C1)
-    {
-        If (_OSI ("Darwin"))
-        {
-            Name (USTP, One)
         }
     }
 
@@ -1145,9 +1337,17 @@ DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
         }
     }
 
+    Scope (_SB.PCI0.I2C1)
+    {
+        If (_OSI ("Darwin"))
+        {
+            Name (USTP, One)
+        }
+    }
+
     Scope (_SB.PCI0.GFX0)
     {
-        OperationRegion (RMP3, PCI_Config, Zero, 0x14)
+        OperationRegion (RMP1, PCI_Config, 0x02, 0x02)
     }
 
     Device (_SB.PCI0.GFX0.PNLF)
@@ -1156,261 +1356,115 @@ DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
         Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
         Name (_CID, "backlight")  // _CID: Compatible ID
         Name (_UID, Zero)  // _UID: Unique ID
-        Method (_STA, 0, NotSerialized)  // _STA: Status
+        Name (_STA, 0x0B)  // _STA: Status
+        Field (RMP1, AnyAcc, NoLock, Preserve)
         {
-            If (_OSI ("Darwin"))
-            {
-                Return (0x0B)
-            }
-            Else
-            {
-                Return (Zero)
-            }
-        }
-
-        Field (^RMP3, AnyAcc, NoLock, Preserve)
-        {
-            Offset (0x02), 
-            GDID,   16, 
-            Offset (0x10), 
-            BAR1,   32
-        }
-
-        OperationRegion (RMB1, SystemMemory, (BAR1 & 0xFFFFFFFFFFFFFFF0), 0x000E1184)
-        Field (RMB1, AnyAcc, Lock, Preserve)
-        {
-            Offset (0x48250), 
-            LEV2,   32, 
-            LEVL,   32, 
-            Offset (0x70040), 
-            P0BL,   32, 
-            Offset (0xC2000), 
-            GRAN,   32, 
-            Offset (0xC8250), 
-            LEVW,   32, 
-            LEVX,   32, 
-            LEVD,   32, 
-            Offset (0xE1180), 
-            PCHL,   32
-        }
-
-        Method (INI1, 1, NotSerialized)
-        {
-            If ((Zero == (0x02 & Arg0)))
-            {
-                Local5 = 0xC0000000
-                If (CondRefOf (\RMCF.LEVW))
-                {
-                    If ((Ones != \RMCF.LEVW))
-                    {
-                        Local5 = \RMCF.LEVW /* External reference */
-                    }
-                }
-
-                ^LEVW = Local5
-            }
-
-            If ((0x04 & Arg0))
-            {
-                If (CondRefOf (\RMCF.GRAN))
-                {
-                    ^GRAN = \RMCF.GRAN /* External reference */
-                }
-                Else
-                {
-                    ^GRAN = Zero
-                }
-            }
+            GDID,   16
         }
 
         Method (_INI, 0, NotSerialized)  // _INI: Initialize
         {
-            Local4 = One
-            If (CondRefOf (\RMCF.BKLT))
-            {
-                Local4 = \RMCF.BKLT /* External reference */
-            }
-
-            If (!(One & Local4))
-            {
-                Return (Zero)
-            }
-
             Local0 = ^GDID /* \_SB_.PCI0.GFX0.PNLF.GDID */
-            Local2 = Ones
-            If (CondRefOf (\RMCF.LMAX))
-            {
-                Local2 = \RMCF.LMAX /* External reference */
-            }
-
-            Local3 = Zero
-            If (CondRefOf (\RMCF.FBTP))
-            {
-                Local3 = \RMCF.FBTP /* External reference */
-            }
-
-            If (((One == Local3) || (Ones != Match (Package (0x10)
-                                {
-                                    0x010B, 
-                                    0x0102, 
-                                    0x0106, 
-                                    0x1106, 
-                                    0x1601, 
-                                    0x0116, 
-                                    0x0126, 
-                                    0x0112, 
-                                    0x0122, 
-                                    0x0152, 
-                                    0x0156, 
-                                    0x0162, 
-                                    0x0166, 
-                                    0x016A, 
-                                    0x46, 
-                                    0x42
-                                }, MEQ, Local0, MTR, Zero, Zero))))
-            {
-                If ((Ones == Local2))
-                {
-                    Local2 = 0x0710
-                }
-
-                Local1 = (^LEVX >> 0x10)
-                If (!Local1)
-                {
-                    Local1 = Local2
-                }
-
-                If ((Local2 != Local1))
-                {
-                    Local0 = ((^LEVL * Local2) / Local1)
-                    Local3 = (Local2 << 0x10)
-                    If ((Local2 > Local1))
-                    {
-                        ^LEVX = Local3
-                        ^LEVL = Local0
-                    }
-                    Else
-                    {
-                        ^LEVL = Local0
-                        ^LEVX = Local3
-                    }
-                }
-            }
-            ElseIf (((0x03 == Local3) || (Ones != Match (Package (0x04)
-                                {
-                                    0x3E9B, 
-                                    0x3EA5, 
-                                    0x3E92, 
-                                    0x3E91
-                                }, MEQ, Local0, MTR, Zero, Zero))))
-            {
-                If ((Ones == Local2))
-                {
-                    Local2 = 0xFFFF
-                }
-
-                INI1 (Local4)
-                Local1 = ^LEVX /* \_SB_.PCI0.GFX0.PNLF.LEVX */
-                If (!Local1)
-                {
-                    Local1 = Local2
-                }
-
-                If ((Local2 != Local1))
-                {
-                    Local0 = ((^LEVD * Local2) / Local1)
-                    If ((Local2 > Local1))
-                    {
-                        ^LEVX = Local2
-                        ^LEVD = Local0
-                    }
-                    Else
-                    {
-                        ^LEVD = Local0
-                        ^LEVX = Local2
-                    }
-                }
-            }
-            Else
-            {
-                If ((Ones == Local2))
-                {
-                    If ((Ones != Match (Package (0x16)
-                                    {
-                                        0x0D26, 
-                                        0x0A26, 
-                                        0x0D22, 
-                                        0x0412, 
-                                        0x0416, 
-                                        0x0A16, 
-                                        0x0A1E, 
-                                        0x0A1E, 
-                                        0x0A2E, 
-                                        0x041E, 
-                                        0x041A, 
-                                        0x0BD1, 
-                                        0x0BD2, 
-                                        0x0BD3, 
-                                        0x1606, 
-                                        0x160E, 
-                                        0x1616, 
-                                        0x161E, 
-                                        0x1626, 
-                                        0x1622, 
-                                        0x1612, 
-                                        0x162B
-                                    }, MEQ, Local0, MTR, Zero, Zero)))
-                    {
-                        Local2 = 0x0AD9
-                    }
-                    Else
-                    {
-                        Local2 = 0x056C
-                    }
-                }
-
-                INI1 (Local4)
-                Local1 = (^LEVX >> 0x10)
-                If (!Local1)
-                {
-                    Local1 = Local2
-                }
-
-                If ((Local2 != Local1))
-                {
-                    Local0 = ((((^LEVX & 0xFFFF) * Local2) / Local1) | 
-                        (Local2 << 0x10))
-                    ^LEVX = Local0
-                }
-            }
-
-            If ((Local2 == 0x0710))
+            If ((Ones != Match (Package (0x15)
+                            {
+                                0x42, 
+                                0x46, 
+                                0x4A, 
+                                0x0102, 
+                                0x0106, 
+                                0x010A, 
+                                0x010B, 
+                                0x010E, 
+                                0x0112, 
+                                0x0116, 
+                                0x0122, 
+                                0x0126, 
+                                0x0152, 
+                                0x0156, 
+                                0x015A, 
+                                0x015E, 
+                                0x0162, 
+                                0x0166, 
+                                0x016A, 
+                                0x0172, 
+                                0x0176
+                            }, MEQ, Local0, MTR, Zero, Zero)))
             {
                 _UID = 0x0E
             }
-            ElseIf ((Local2 == 0x0AD9))
+            ElseIf ((Ones != Match (Package (0x1D)
+                            {
+                                0x0402, 
+                                0x0406, 
+                                0x040A, 
+                                0x0412, 
+                                0x0416, 
+                                0x041A, 
+                                0x041E, 
+                                0x0A06, 
+                                0x0A16, 
+                                0x0A1E, 
+                                0x0A22, 
+                                0x0A26, 
+                                0x0A2A, 
+                                0x0A2B, 
+                                0x0A2E, 
+                                0x0D12, 
+                                0x0D16, 
+                                0x0D22, 
+                                0x0D26, 
+                                0x0D2A, 
+                                0x0D36, 
+                                0x1612, 
+                                0x1616, 
+                                0x161E, 
+                                0x1622, 
+                                0x1626, 
+                                0x162A, 
+                                0x162B, 
+                                0x162D
+                            }, MEQ, Local0, MTR, Zero, Zero)))
             {
                 _UID = 0x0F
             }
-            ElseIf ((Local2 == 0x056C))
+            ElseIf ((Ones != Match (Package (0x1D)
+                            {
+                                0x1902, 
+                                0x1906, 
+                                0x190B, 
+                                0x1912, 
+                                0x1916, 
+                                0x191B, 
+                                0x191D, 
+                                0x191E, 
+                                0x1921, 
+                                0x1923, 
+                                0x1926, 
+                                0x1927, 
+                                0x192B, 
+                                0x192D, 
+                                0x1932, 
+                                0x193A, 
+                                0x193B, 
+                                0x5902, 
+                                0x5912, 
+                                0x5916, 
+                                0x5917, 
+                                0x591B, 
+                                0x591C, 
+                                0x591D, 
+                                0x591E, 
+                                0x5923, 
+                                0x5926, 
+                                0x5927, 
+                                0x87C0
+                            }, MEQ, Local0, MTR, Zero, Zero)))
             {
                 _UID = 0x10
             }
-            ElseIf ((Local2 == 0x07A1))
-            {
-                _UID = 0x11
-            }
-            ElseIf ((Local2 == 0x1499))
-            {
-                _UID = 0x12
-            }
-            ElseIf ((Local2 == 0xFFFF))
-            {
-                _UID = 0x13
-            }
             Else
             {
-                _UID = 0x63
+                _UID = 0x13
             }
         }
     }
@@ -1537,22 +1591,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
             }
 
             Return (Zero)
-        }
-    }
-
-    Device (_SB.PCI0.LPCB.EC)
-    {
-        Name (_HID, "ACID0001")  // _HID: Hardware ID
-        Method (_STA, 0, NotSerialized)  // _STA: Status
-        {
-            If (_OSI ("Darwin"))
-            {
-                Return (0x0F)
-            }
-            Else
-            {
-                Return (Zero)
-            }
         }
     }
 }
