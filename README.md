@@ -9,9 +9,9 @@ Camera | ASUS UVC HD | Working |
 Audio | Conexant Audio CX8050 | Working |
 Battery | B31N1637 42Wh | Working | 
 Touchpad | ELAN1300 | Working |
-Wifi | Intel Wireless-AC 8265 | Supported | Refer to [zxystd git](https://github.com/zxystd) 
-Discrete Graphic | Nvidia GeForce 940MX | Unsupported | Disabled with *NoHybGfx*
-Fingerprint | ELAN EFSA96SA-H700Z | Unsupported | Disabled with *NoTouchID kext*
+Wifi | Intel Wireless-AC 8265 | Supported | Refer to [zxystd git](https://github.com/zxystd), Not include here.
+Discrete Graphic | Nvidia GeForce 940MX | Unsupported | Disabled with `NoHybGfx.aml`
+Fingerprint | ELAN EFSA96SA-H700Z | Unsupported | Disabled with `NoTouchID.kext`
 Bios | [**310**](https://dlcdnets.asus.com/pub/ASUS/nb/X510UQ/X510UQAS310.zip) | Compatible |
 MacOS | [**11.0 (20A5384c)**](https://developer.apple.com/macos/) | Compatible |
 OpenCore | [**0.6.2**](https://github.com/acidanthera/OpenCorePkg) | Compatible |
@@ -33,6 +33,9 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 
 ## Changelog
 
+**Oct 14, 2020**
+- Implemented `AppleBacklightSmoother` and `PNLF.aml` Patch from [hieplpvip repo](https://github.com/hieplpvip/AppleBacklightSmoother), Thanks to his awesome work.
+
 **Oct 7, 2020**
 - Update OpenCore to 0.6.2
 - Update Kexts to latest version 
@@ -49,7 +52,7 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 
 **Sept 13, 2020**
 - Revert back to MacBook14,1 as for now. 
-- All the necessary SSDT patches merged into SSDT-S510UQ.aml
+- All the necessary SSDT patches merged into `SSDT-S510UQ.aml`
     
 **Sept 11, 2020**
 - Added back NoHybGfx
