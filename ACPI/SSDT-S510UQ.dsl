@@ -1355,7 +1355,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "X510UQ", 0x00000000)
         Name (_ADR, Zero)  // _ADR: Address
         Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
         Name (_CID, "backlight")  // _CID: Compatible ID
-        Name (_UID, Zero)  // _UID: Unique ID
+        Name (_UID, 0x10)  // _UID: Unique ID
         Name (_STA, 0x0B)  // _STA: Status
         Field (RMP1, AnyAcc, NoLock, Preserve)
         {
