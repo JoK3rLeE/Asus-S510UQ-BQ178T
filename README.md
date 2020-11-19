@@ -13,8 +13,8 @@ Wifi | Intel Wireless-AC 8265 | Supported | Refer to [zxystd git](https://github
 Discrete Graphic | Nvidia GeForce 940MX | Unsupported | Disabled with `NoHybGfx.aml`
 Fingerprint | ELAN EFSA96SA-H700Z | Unsupported | Disabled with `NoTouchID.kext`
 Bios | [**310**](https://dlcdnets.asus.com/pub/ASUS/nb/X510UQ/X510UQAS310.zip) | Compatible |
-MacOS | [**11.0 (20A5384c)**](https://developer.apple.com/macos/) | Compatible |
-OpenCore | [**0.6.2**](https://github.com/acidanthera/OpenCorePkg) | Compatible |
+MacOS | [**11.0.1 (20B29)**](https://developer.apple.com/macos/) | Compatible | Tested on Catalina & Big Sur
+OpenCore | [**0.6.3**](https://github.com/acidanthera/OpenCorePkg) | Compatible | 
 
 
 # Asus Other Models 
@@ -33,6 +33,11 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 
 ## Changelog
 
+**Nov 19, 2020**
+- **Last update from my side, unless there is a visible bugs.**
+- Everything works (Tested on Catalina, Big Sur Beta and Release) 
+- Updated to latest OC to 0.6.3 and latest kexts
+
 **Oct 14, 2020**
 - Implemented `AppleBacklightSmoother` and `PNLF.aml` Patch from [hieplpvip repo](https://github.com/hieplpvip/AppleBacklightSmoother), Thanks to his awesome work.
 
@@ -42,7 +47,6 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 
 **Sept 28, 2020**
 - Removed *MacBookPro14,1 & MacBookPro15,2* config and set **MacBookPro15,4** as default config.
-- ~~**Temporary suspend update from now until my LCD get fix.**~~
 
 **Sept 15, 2020**
 - Update AsusSMC and DSDT Patch based on hieplpvip guide. 
