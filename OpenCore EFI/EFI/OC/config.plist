@@ -1261,7 +1261,7 @@
 			<key>ARTFrequency</key>
 			<integer>0</integer>
 			<key>BoardProduct</key>
-			<string>Mac-53FDB3D8DB8CA971</string>
+			<string></string>
 			<key>BoardRevision</key>
 			<data>AQ==</data>
 			<key>DevicePathsSupported</key>
@@ -1275,7 +1275,7 @@
 			<key>SmcBranch</key>
 			<data></data>
 			<key>SmcPlatform</key>
-			<data>ajIxMwAAAAA=</data>
+			<data></data>
 			<key>SmcRevision</key>
 			<data></data>
 			<key>StartupPowerEvents</key>
@@ -1283,43 +1283,43 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro15,4</string>
 			<key>SystemSerialNumber</key>
-			<string>FVFYQ0REL40Y</string>
+			<string></string>
 			<key>SystemUUID</key>
-			<string>A916BB4B-0EE9-43B4-A874-3C1E4ABC159D</string>
+			<string></string>
 		</dict>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>FVF9209024N0000CB</string>
+			<string></string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>SystemMemoryStatus</key>
 			<string>Upgradable</string>
 			<key>ROM</key>
-			<data>t8AnUAVN</data>
+			<data></data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>MacBookPro15,4</string>
 			<key>SystemSerialNumber</key>
-			<string>FVFYQ0REL40Y</string>
+			<string></string>
 			<key>SystemUUID</key>
-			<string>A916BB4B-0EE9-43B4-A874-3C1E4ABC159D</string>
+			<string></string>
 		</dict>
 		<key>PlatformNVRAM</key>
 		<dict>
 			<key>BID</key>
-			<string>Mac-53FDB3D8DB8CA971</string>
+			<string></string>
 			<key>FirmwareFeatures</key>
-			<data>JvSP/QAAAAA=</data>
+			<data></data>
 			<key>FirmwareFeaturesMask</key>
-			<data>P/+f/wAAAAA=</data>
+			<data></data>
 			<key>MLB</key>
-			<string>FVF9209024N0000CB</string>
+			<string></string>
 			<key>ROM</key>
-			<data>t8AnUAVN</data>
+			<data></data>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
