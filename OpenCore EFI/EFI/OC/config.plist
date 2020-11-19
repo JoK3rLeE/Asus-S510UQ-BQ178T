@@ -16,7 +16,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Main ACPI For X510UQ</string>
+				<string>Main ACPI for X510UQ</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -541,7 +541,7 @@
 				<key>BundlePath</key>
 				<string>AppleBacklightSmoother.kext</string>
 				<key>Comment</key>
-				<string>LCD Backlight</string>
+				<string>Apple Backlight Smoother</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -845,24 +845,6 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>VoodooI2C.kext/Contents/Plugins/VoodooInput.kext</string>
-				<key>Comment</key>
-				<string>MT2</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VoodooInput</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
 				<string>VoodooI2C.kext</string>
 				<key>Comment</key>
 				<string>I2C</string>
@@ -888,6 +870,24 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooI2CHID</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>VoodooInput.kext</string>
+				<key>Comment</key>
+				<string>MT2</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VoodooInput</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1042,6 +1042,8 @@
 			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
+			<key>ForceSecureBootScheme</key>
+			<false/>
 			<key>IncreasePciBarSize</key>
 			<false/>
 			<key>LapicKernelPanic</key>
@@ -1049,7 +1051,7 @@
 			<key>LegacyCommpage</key>
 			<false/>
 			<key>PanicNoKextDump</key>
-			<false/>
+			<true/>
 			<key>PowerTimeoutKernelPanic</key>
 			<false/>
 			<key>ThirdPartyDrives</key>
@@ -1141,7 +1143,7 @@
 			<key>AuthRestart</key>
 			<false/>
 			<key>BootProtect</key>
-			<string>None</string>
+			<string>Bootstrap</string>
 			<key>DmgLoading</key>
 			<string>Signed</string>
 			<key>EnablePassword</key>
@@ -1185,11 +1187,11 @@
 				<key>SystemAudioVolume</key>
 				<data>gA==</data>
 				<key>boot-args</key>
-				<string>brcmfx-country=US igfxcflbklt=0 -wegnoegpu -v</string>
+				<string>brcmfx-country=US -wegnoegpu -v</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
-				<string>en-US:0</string>
+				<data>ZW4tVVM6MA==</data>
 				<key>run-efi-updater</key>
 				<string>No</string>
 			</dict>
@@ -1252,14 +1254,16 @@
 	<dict>
 		<key>Automatic</key>
 		<true/>
+		<key>CustomMemory</key>
+		<false/>
 		<key>DataHub</key>
 		<dict>
 			<key>ARTFrequency</key>
 			<integer>0</integer>
 			<key>BoardProduct</key>
-			<string></string>
+			<string>Mac-53FDB3D8DB8CA971</string>
 			<key>BoardRevision</key>
-			<data></data>
+			<data>AQ==</data>
 			<key>DevicePathsSupported</key>
 			<integer>0</integer>
 			<key>FSBFrequency</key>
@@ -1271,7 +1275,7 @@
 			<key>SmcBranch</key>
 			<data></data>
 			<key>SmcPlatform</key>
-			<data></data>
+			<data>ajIxMwAAAAA=</data>
 			<key>SmcRevision</key>
 			<data></data>
 			<key>StartupPowerEvents</key>
@@ -1279,43 +1283,43 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro15,4</string>
 			<key>SystemSerialNumber</key>
-			<string></string>
+			<string>FVFYQ0REL40Y</string>
 			<key>SystemUUID</key>
-			<string></string>
+			<string>A916BB4B-0EE9-43B4-A874-3C1E4ABC159D</string>
 		</dict>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string></string>
+			<string>FVF9209024N0000CB</string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>SystemMemoryStatus</key>
-			<string>Auto</string>
+			<string>Upgradable</string>
 			<key>ROM</key>
-			<data></data>
+			<data>t8AnUAVN</data>
 			<key>SpoofVendor</key>
-			<false/>
+			<true/>
 			<key>SystemProductName</key>
 			<string>MacBookPro15,4</string>
 			<key>SystemSerialNumber</key>
-			<string></string>
+			<string>FVFYQ0REL40Y</string>
 			<key>SystemUUID</key>
-			<string></string>
+			<string>A916BB4B-0EE9-43B4-A874-3C1E4ABC159D</string>
 		</dict>
 		<key>PlatformNVRAM</key>
 		<dict>
 			<key>BID</key>
-			<string></string>
+			<string>Mac-53FDB3D8DB8CA971</string>
 			<key>FirmwareFeatures</key>
-			<data></data>
+			<data>JvSP/QAAAAA=</data>
 			<key>FirmwareFeaturesMask</key>
-			<data></data>
+			<data>P/+f/wAAAAA=</data>
 			<key>MLB</key>
-			<string></string>
+			<string>FVF9209024N0000CB</string>
 			<key>ROM</key>
-			<data></data>
+			<data>t8AnUAVN</data>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1397,6 +1401,8 @@
 			<key>ConsoleMode</key>
 			<string></string>
 			<key>DirectGopRendering</key>
+			<false/>
+			<key>ForceResolution</key>
 			<false/>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
