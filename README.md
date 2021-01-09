@@ -12,7 +12,7 @@ Touchpad | ELAN1300 | Working |
 Wifi | Intel Wireless-AC 8265 | Partially Supported, Refer to [OpenIntelWireless](https://github.com/OpenIntelWireless)
 Discrete Graphic | Nvidia GeForce 940MX | Unsupported, Disabled by default
 Bios Version | 310 | CFG Offset 0x527
-OS | [** Latest macOS**](https://developer.apple.com/macos/) | Works on 10.15 & 11.1 |
+OS | [**Latest macOS**](https://developer.apple.com/macos/) | Works on 10.15 & 11.1 |
 
 # Asus Other Models 
 
