@@ -28,6 +28,10 @@ X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Up-To-Date OpenCore
 Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
 
 ## Changelog
+**Jan 10, 2021**
+- Removed old battery ACPI from X510UQ.aml 
+- Use Whatnameisit ACPI battery patch 
+
 **Jan 9, 2021**
 - Removed all misleading informations
 - Removed AppleBackLightSmoother as I didn't even implement properly. 
