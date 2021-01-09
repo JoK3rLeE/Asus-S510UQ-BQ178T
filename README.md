@@ -1,17 +1,17 @@
 # Specification
 
-Device | Details | status | Comment
------------- | ------------- | ------------- | -------------
-CPU | [**Intel Core i5-7200U**](https://ark.intel.com/content/www/us/en/ark/products/95443/intel-core-i5-7200u-processor-3m-cache-up-to-3-10-ghz.html) | Working | 
+Device | Details | Other detail |
+------------ | ------------- | ------------- | 
+CPU | [**Intel Core i5-7200U**](https://ark.intel.com/content/www/us/en/ark/products/95443/intel-core-i5-7200u-processor-3m-cache-up-to-3-10-ghz.html) | Working |
 Graphic | Intel UHD620 | Working |
 Card Reader | Realtek RTL8411B_RTS5226_RTS5227 | Working |
 Camera | ASUS UVC HD | Working |
 Audio | Conexant Audio CX8050 | Working |
 Battery | B31N1637 42Wh | Working | 
 Touchpad | ELAN1300 | Working |
-Wifi | Intel Wireless-AC 8265 | Partially Supported | Refer to [OpenIntelWireless](https://github.com/OpenIntelWireless), Not include here.
-Discrete Graphic | Nvidia GeForce 940MX | Unsupported | Disabled by default
-Bios | [**310**](https://dlcdnets.asus.com/pub/ASUS/nb/X510UQ/X510UQAS310.zip) | Compatible |
+Wifi | Intel Wireless-AC 8265 | Partially Supported, Refer to [OpenIntelWireless](https://github.com/OpenIntelWireless)
+Discrete Graphic | Nvidia GeForce 940MX | Unsupported, Disabled by default
+Bios Version | 310 | CFG Offset 0x527
 MacOS | [**11.0.1 (20B29)**](https://developer.apple.com/macos/) | Works on 10.15 & 11.1 |
 
 
