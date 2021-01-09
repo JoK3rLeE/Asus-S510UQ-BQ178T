@@ -14,14 +14,13 @@ Discrete Graphic | Nvidia GeForce 940MX | Unsupported, Disabled by default
 Bios Version | 310 | CFG Offset 0x527
 MacOS | [**11.0.1 (20B29)**](https://developer.apple.com/macos/) | Works on 10.15 & 11.1 |
 
-
 # Asus Other Models 
 
-For stability, user are adviced to use **whatnameisit** EFI file. 
+For stability, user are adviced to use **whatnameisit** EFI file. **His EFI works well on Asus S510UQ series**
 
-Hackintosh  | Details | Clover | OpenCore | Maintainer link
------------- | ------------- | ------------- | ------------- | ------------- 
-X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Dropped | Support latest macOS | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+Hackintosh  | Details | EFI Type | Maintainer link
+------------ | ------------- | ------------- | ------------- 
+X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Up-To-Date OpenCore EFI | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
 # CFG Lock Offset
 ~CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable **AppleCpuPmCfgLock and AppleXcpmCfgLock** in config before boot up the OC.~ ***Enabled by default, Sorry for the misleading*** 
@@ -71,12 +70,8 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 - Minimised ACPI patch
 - Changed System Product name to MacBookPro15,1
 - Revert changes that causes kernel panic when rebuild kext cache.
-    
-## Download Link
-[Github releases](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/releases)
 
 # Useful tools  
-[Open Core Configurator](https://mackie100projects.altervista.org/download-opencore-configurator/)
 
 [Hackintool](https://github.com/headkaze/Hackintool)
 
