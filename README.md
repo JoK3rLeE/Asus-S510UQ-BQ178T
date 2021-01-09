@@ -25,7 +25,7 @@ X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Up-To-Date OpenCore
 # CFG Lock Offset
 ~CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable **AppleCpuPmCfgLock and AppleXcpmCfgLock** in config before boot up the OC.~ ***Enabled by default, Sorry for the misleading*** 
 
-Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
+Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html)
 
 ## Changelog
 **Jan 10, 2021**
