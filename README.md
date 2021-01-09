@@ -9,12 +9,10 @@ Camera | ASUS UVC HD | Working |
 Audio | Conexant Audio CX8050 | Working |
 Battery | B31N1637 42Wh | Working | 
 Touchpad | ELAN1300 | Working |
-Wifi | Intel Wireless-AC 8265 | Supported | Refer to [OpenIntelWireless](https://github.com/OpenIntelWireless), Not include here.
-Discrete Graphic | Nvidia GeForce 940MX | Unsupported | Disabled with `NoHybGfx.aml`
-Fingerprint | ELAN EFSA96SA-H700Z | Unsupported | Disabled with `NoTouchID.kext`
+Wifi | Intel Wireless-AC 8265 | Partially Supported | Refer to [OpenIntelWireless](https://github.com/OpenIntelWireless), Not include here.
+Discrete Graphic | Nvidia GeForce 940MX | Unsupported | Disabled by default
 Bios | [**310**](https://dlcdnets.asus.com/pub/ASUS/nb/X510UQ/X510UQAS310.zip) | Compatible |
-MacOS | [**11.0.1 (20B29)**](https://developer.apple.com/macos/) | Compatible | Tested on Catalina & Big Sur
-OpenCore | [**0.6.4**](https://github.com/acidanthera/OpenCorePkg) | Compatible | 
+MacOS | [**11.0.1 (20B29)**](https://developer.apple.com/macos/) | Works on 10.15 & 11.1 |
 
 
 # Asus Other Models 
@@ -23,15 +21,19 @@ For stability, user are adviced to use **whatnameisit** EFI file.
 
 Hackintosh  | Details | Clover | OpenCore | Maintainer link
 ------------ | ------------- | ------------- | ------------- | ------------- 
-S510UA/F510UA | ***With*** KB Light and dGPU version | Supported | - | [tctien342](https://github.com/tctien342/Asus-Vivobook-S510UA-Hackintosh)
-X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | - | Supported | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Dropped | Support latest macOS | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
 # CFG Lock Offset
-~CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable **AppleCpuPmCfgLock and AppleXcpmCfgLock** in config before boot up the OC.~ ***Enabled by default.*** 
+~CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable **AppleCpuPmCfgLock and AppleXcpmCfgLock** in config before boot up the OC.~ ***Enabled by default, Sorry for the misleading*** 
 
 Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
 
 ## Changelog
+**Jan 9, 2021**
+- Removed all misleading informations
+- Removed AppleBackLightSmoother as I didn't even implement properly. 
+- Removed unnecessary tools from EFI 
+- Updated new config for the changes above
 
 **Nov 19, 2020**
 - **Last update from my side, unless there is a visible bugs.**
@@ -39,7 +41,7 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 - Updated to latest OC to 0.6.3 and latest kexts
 
 **Oct 14, 2020**
-- Implemented `AppleBacklightSmoother` and `PNLF.aml` Patch from [hieplpvip repo](https://github.com/hieplpvip/AppleBacklightSmoother), Thanks to his awesome work.
+- ~Implemented `AppleBacklightSmoother` and~ `PNLF.aml` Patch from [hieplpvip repo](https://github.com/hieplpvip/AppleBacklightSmoother), Thanks to his awesome work.
 
 **Oct 7, 2020**
 - Update OpenCore to 0.6.2
