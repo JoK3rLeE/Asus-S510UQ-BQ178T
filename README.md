@@ -1,31 +1,27 @@
 # Specification
-
 Device | Details | Other detail |
 ------------ | ------------- | ------------- | 
-CPU | [**Intel Core i5-7200U**](https://ark.intel.com/content/www/us/en/ark/products/95443/intel-core-i5-7200u-processor-3m-cache-up-to-3-10-ghz.html) | Working |
+CPU | Intel Core i5-7200U | Working |
 Graphic | Intel UHD620 | Working |
 Card Reader | Realtek RTL8411B_RTS5226_RTS5227 | Working |
 Camera | ASUS UVC HD | Working |
 Audio | Conexant Audio CX8050 | Working |
 Battery | B31N1637 42Wh | Working | 
 Touchpad | ELAN1300 | Working |
-Wifi | Intel Wireless-AC 8265 | Partially Supported, Refer to [OpenIntelWireless](https://github.com/OpenIntelWireless)
-Discrete Graphic | Nvidia GeForce 940MX | Unsupported, Disabled by default
-Bios Version | 310 | CFG Offset 0x527
-OS | [**Latest macOS**](https://developer.apple.com/macos/) | Works on 10.15 & 11.1 |
+Default Wi-Fi Card | Intel Wireless-AC 8265 | Supported, Download from [OpenIntelWireless](https://github.com/OpenIntelWireless)
+Replaced Wi-Fi Card | BCM 94352Z | Working |
+Discrete Graphic | Nvidia GeForce 940MX | Unsupported, Disabled
+Operating System | Latest macOS | Works on 10.15 & 11.1 
 
 # Asus Other Models 
-
 For stability, user are adviced to use **whatnameisit** EFI file. **His EFI works well on Asus S510UQ series**
 
-Hackintosh  | Details | EFI Type | Maintainer link
+Hackintosh Model | Details | EFI Type | Maintainer link
 ------------ | ------------- | ------------- | ------------- 
-X510UA-BQ490 | ***No*** KB light and ***No*** dGPU version | Up-To-Date OpenCore EFI | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+X510UA-BQ490 | *No* Keyboard light and *No* discrete card version | OpenCore EFI | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
 # CFG Lock Offset
-~CFG MUST BE Unlock to avoid **[EB|#LOG:EXITBS:START]** Issue in OpenCore, Of course you can ignore CFG lock but there's a chance to causes kernel panic when update OS. Make sure you enable **AppleCpuPmCfgLock and AppleXcpmCfgLock** in config before boot up the OC.~ ***Enabled by default, Sorry for the misleading*** 
-
-Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html)
+Asus S510UQ bios version 309/310 CFG Lock offset is **0x527**, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html)
 
 ## Changelog
 **Jan 10, 2021**
@@ -39,7 +35,6 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 - Updated new config for the changes above
 
 **Nov 19, 2020**
-- **Last update from my side, unless there is a visible bugs.**
 - Everything works (Tested on Catalina, Big Sur Beta and Release) 
 - Updated to latest OC to 0.6.3 and latest kexts
 
@@ -74,14 +69,6 @@ Asus S510UQ bios version 310 CFG Lock offset is **0x527**, [Follow Dortania guid
 - Minimised ACPI patch
 - Changed System Product name to MacBookPro15,1
 - Revert changes that causes kernel panic when rebuild kext cache.
-
-# Useful tools  
-
-[Hackintool](https://github.com/headkaze/Hackintool)
-
-[MaciASL](https://github.com/acidanthera/MaciASL) 
-
-[IORegistryExplorer](https://github.com/vulgo/IORegistryExplorer) 
 
 
 # Credits 
