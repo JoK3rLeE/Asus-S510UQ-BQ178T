@@ -8,7 +8,7 @@ Camera | ASUS UVC HD | Working |
 Audio | Conexant Audio CX8050 | Working |
 Battery | B31N1637 42Wh | Working | 
 Touchpad | ELAN1300 | Working |
-Default Wi-Fi Card | Intel Wireless-AC 8265 | Supported, Download from [OpenIntelWireless](https://github.com/OpenIntelWireless)
+Default Wi-Fi Card | Intel Wireless-AC 8265 | Supported
 Replaced Wi-Fi Card | BCM 94352Z | Working |
 Discrete Graphic | Nvidia GeForce 940MX | Unsupported, Disabled
 Operating System | Latest macOS | Works on 10.15 & 11.1 
