@@ -20,6 +20,16 @@ Hackintosh Model | Details | EFI Type | Maintainer link
 ------------ | ------------- | ------------- | ------------- 
 X510UA-BQ490 | *No* Keyboard light and *No* discrete card version | OpenCore EFI | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
+# Post Installation 
+1.Install AsusSMC daemon for keyboard backlight and Fn keys on Asus laptops. download from: [**AsusSMC repo**](https://github.com/hieplpvip/AsusSMC/releases) 
+
+2.Intel WiFi card User need to install heliport for Wi-Fi connections [*More info*](https://openintelwireless.github.io/itlwm/FAQ.html#installation) or download from: [**Heliport repo**](https://github.com/OpenIntelWireless/HeliPort/releases)
+
+3.[Optional] CPU Power management: Create own SSDT-DATA for performance/ Battery saving patch [**CPUFriendFriend**](https://github.com/corpnewt/CPUFriendFriend)
+
+
+4.[Optional] GenSMBIOS: generate SMBIOS [corpnewt repo](https://github.com/corpnewt/GenSMBIOS)
+
 # CFG Lock Offset
 Asus S510UQ bios version 309/310 CFG Lock offset is **0x527**, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html)
 
