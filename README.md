@@ -24,6 +24,10 @@ X510UA-BQ490 | *No* Keyboard light and *No* discrete card version | OpenCore EFI
 Asus S510UQ bios version 309/310 CFG Lock offset is **0x527**, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html)
 
 ## Changelog
+**Jan 22, 2021**
+- Fixed kernel panic randomly (XCPM Power Management) 
+- Properly disable DGPU (RP01 Patch) 
+
 **Jan 10, 2021**
 - Removed old battery ACPI from X510UQ.aml 
 - Use Whatnameisit ACPI battery patch 
@@ -39,7 +43,7 @@ Asus S510UQ bios version 309/310 CFG Lock offset is **0x527**, [Follow Dortania 
 - Updated to latest OC to 0.6.3 and latest kexts
 
 **Oct 14, 2020**
-- ~Implemented `AppleBacklightSmoother` and~ `PNLF.aml` Patch from [hieplpvip repo](https://github.com/hieplpvip/AppleBacklightSmoother), Thanks to his awesome work.
+- Implemented `AppleBacklightSmoother` and `PNLF.aml` Patch from [hieplpvip repo](https://github.com/hieplpvip/AppleBacklightSmoother), Thanks to his awesome work.
 
 **Oct 7, 2020**
 - Update OpenCore to 0.6.2
