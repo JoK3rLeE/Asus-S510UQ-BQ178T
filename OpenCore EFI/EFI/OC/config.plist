@@ -8,15 +8,15 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>XCPM</string>
+				<string>Main ACPI</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-PLUG.aml</string>
+				<string>SSDT-ASUS-ACPI.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Battery patch by whatnamesit</string>
+				<string>Enable battery reading</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -24,11 +24,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Main ACPI for S510U</string>
+				<string>Disable RP01 DGPU</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-S510UQ.aml</string>
+				<string>SSDT-NoHybGfx.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Enable XCPM</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-PLUG.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
@@ -614,24 +622,6 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>AppleBacklightSmoother.kext</string>
-				<key>Comment</key>
-				<string>Backlight Smoother</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AppleBacklightSmoother</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
 				<string>SMCProcessor.kext</string>
 				<key>Comment</key>
 				<string>SMC Prosessor</string>
@@ -738,7 +728,7 @@
 			</dict>
 			<dict>
 				<key>Arch</key>
-				<string>Any</string>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>BrcmBluetoothInjector.kext</string>
 				<key>Comment</key>
@@ -756,7 +746,7 @@
 			</dict>
 			<dict>
 				<key>Arch</key>
-				<string>Any</string>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>BrcmFirmwareData.kext</string>
 				<key>Comment</key>
@@ -774,7 +764,7 @@
 			</dict>
 			<dict>
 				<key>Arch</key>
-				<string>Any</string>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>BrcmPatchRAM3.kext</string>
 				<key>Comment</key>
@@ -1052,7 +1042,7 @@
 			<key>HideAuxiliary</key>
 			<false/>
 			<key>PickerAttributes</key>
-			<integer>3</integer>
+			<integer>1</integer>
 			<key>PickerAudioAssist</key>
 			<false/>
 			<key>PickerMode</key>
@@ -1146,7 +1136,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>brcmfx-country=US -v</string>
+				<string>brcmfx-country=US debug=0x100 keepsyms=1</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1210,57 +1200,62 @@
 		<true/>
 		<key>CustomMemory</key>
 		<false/>
-		<key>DataHub</key>
+		<key>SMBIOS</key>
 		<dict>
-			<key>ARTFrequency</key>
-			<integer>0</integer>
+			<key>BIOSReleaseDate</key>
+			<string>11/30/2020</string>
+			<key>BIOSVendor</key>
+			<string></string>
+			<key>BIOSVersion</key>
+			<string>1554.60.15.0.0</string>
+			<key>BoardAssetTag</key>
+			<string>Base Board Asset Tag</string>
+			<key>BoardLocationInChassis</key>
+			<string>Part Component</string>
+			<key>BoardManufacturer</key>
+			<string></string>
 			<key>BoardProduct</key>
+			<string>Mac-53FDB3D8DB8CA971</string>
+			<key>BoardSerialNumber</key>
 			<string></string>
-			<key>BoardRevision</key>
-			<data></data>
-			<key>DevicePathsSupported</key>
-			<integer>0</integer>
-			<key>FSBFrequency</key>
-			<integer>0</integer>
-			<key>InitialTSC</key>
-			<integer>0</integer>
-			<key>PlatformName</key>
-			<string></string>
-			<key>SmcBranch</key>
-			<data></data>
-			<key>SmcPlatform</key>
-			<data></data>
-			<key>SmcRevision</key>
-			<data></data>
-			<key>StartupPowerEvents</key>
-			<integer>0</integer>
-			<key>SystemProductName</key>
+			<key>BoardType</key>
+			<integer>10</integer>
+			<key>BoardVersion</key>
 			<string>MacBookPro15,4</string>
-			<key>SystemSerialNumber</key>
+			<key>ChassisAssetTag</key>
 			<string></string>
-			<key>SystemUUID</key>
+			<key>ChassisManufacturer</key>
 			<string></string>
-		</dict>
-		<key>Generic</key>
-		<dict>
-			<key>AdviseWindows</key>
-			<false/>
-			<key>MLB</key>
+			<key>ChassisSerialNumber</key>
 			<string></string>
+			<key>ChassisType</key>
+			<integer>9</integer>
+			<key>ChassisVersion</key>
+			<string>Mac-53FDB3D8DB8CA971</string>
+			<key>FirmwareFeatures</key>
+			<data>JvSP/QAAAAA=</data>
+			<key>FirmwareFeaturesMask</key>
+			<data>P/+f/wAAAAA=</data>
+			<key>PlatformFeature</key>
+			<integer>50</integer>
 			<key>ProcessorType</key>
 			<integer>1793</integer>
-			<key>ROM</key>
+			<key>SmcVersion</key>
 			<data></data>
-			<key>SpoofVendor</key>
-			<true/>
-			<key>SystemMemoryStatus</key>
-			<string>Auto</string>
+			<key>SystemFamily</key>
+			<string>MacBook Pro</string>
+			<key>SystemManufacturer</key>
+			<string></string>
 			<key>SystemProductName</key>
 			<string>MacBookPro15,4</string>
+			<key>SystemSKUNumber</key>
+			<string>System SKU#</string>
 			<key>SystemSerialNumber</key>
 			<string></string>
 			<key>SystemUUID</key>
 			<string></string>
+			<key>SystemVersion</key>
+			<string>1.0</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
