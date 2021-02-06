@@ -11,7 +11,8 @@ Touchpad | ELAN1300 | Working |
 Default Wi-Fi Card | Intel Wireless-AC 8265 | Supported
 Replaced Wi-Fi Card | BCM 94352Z | Working |
 Discrete Graphic | Nvidia GeForce 940MX | Unsupported, Disabled
-Operating System | Latest macOS | Works on 10.15 & 11.1 
+
+For Default Intel WiFi EFI, please go to [Intel WiFi EFI branch](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Intel-WiFi-EFI)
 
 # Asus Other Models 
 For stability, user are adviced to use **whatnameisit** EFI file. **His EFI works well on Asus S510UQ series**
