@@ -11,7 +11,10 @@ Touchpad | ELAN1300 | Working |
 Default Wi-Fi Card | Intel Wireless-AC 8265 | Supported
 Replaced Wi-Fi Card | BCM 94352Z | Working |
 Discrete Graphic | Nvidia GeForce 940MX | Unsupported, Disabled
-Operating System | Latest macOS | Works on 10.15 & 11.1 
+
+For Default Intel WiFi EFI, please go to [Intel WiFi EFI branch](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Intel-WiFi-EFI)
+
+For Bcrm 94352Z WiFi card, please use default branch [Big Sur](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T)
 
 # Asus Other Models 
 For stability, user are adviced to use **whatnameisit** EFI file. **His EFI works well on Asus S510UQ series**
@@ -34,6 +37,13 @@ X510UA-BQ490 | *No* Keyboard light and *No* discrete card version | OpenCore EFI
 Asus S510UQ bios version 309/310 CFG Lock offset is **0x527**, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html)
 
 ## Changelog
+**Feb 7, 2021**
+- seperate Intel and bcrm Wifi EFI  
+
+- **Feb 5, 2021:** Remove bootstrap and update config 
+
+- **Feb 3, 2021:** OC 0.6.6 Upstream 
+
 **Jan 22, 2021**
 - Fixed kernel panic randomly (XCPM Power Management) 
 - Properly disable DGPU (RP01 Patch) 
