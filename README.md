@@ -1,5 +1,5 @@
 # Specification
-Device | Details | Other detail |
+Device | Details | Status |
 ------------ | ------------- | ------------- | 
 CPU | Intel Core i5-7200U | Working |
 Graphic | Intel UHD620 | Working |
@@ -12,31 +12,25 @@ Default Wi-Fi Card | Intel Wireless-AC 8265 | Supported
 Replaced Wi-Fi Card | BCM 94352Z | Working |
 Discrete Graphic | Nvidia GeForce 940MX | Unsupported, Disabled
 
-For Default Intel WiFi EFI, please go to [Intel WiFi EFI branch](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Intel-WiFi-EFI)
-
-For Bcrm 94352Z WiFi card, please use default branch [Big Sur](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T)
+For Default Intel WiFi EFI, please go to [Intel WiFi EFI branch](https://github.com/JoK3rLeE/Asus-S510UQ-BQ178T/tree/Intel-WiFi-EFI) 
 
 # Asus Other Models 
 For stability, user are adviced to use **whatnameisit** EFI file. **His EFI works well on Asus S510UQ series**
 
 Hackintosh Model | Details | EFI Type | Maintainer link
 ------------ | ------------- | ------------- | ------------- 
-X510UA-BQ490 | *No* Keyboard light and *No* discrete card version | OpenCore EFI | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
+X510UA-BQ490 | No Keyboard light and No eGPU | OpenCore EFI | [whatnameisit](https://github.com/whatnameisit/Asus-Vivobook-X510UA-BQ490-Catalina-10.15.3-Hackintosh)
 
 # Post Installation 
-1.Install AsusSMC daemon for keyboard backlight and Fn keys on Asus laptops. download from: [**AsusSMC repo**](https://github.com/hieplpvip/AsusSMC/releases) 
-
-2.Intel WiFi card User need to install heliport for Wi-Fi connections [*More info*](https://openintelwireless.github.io/itlwm/FAQ.html#installation) or download from: [**Heliport repo**](https://github.com/OpenIntelWireless/HeliPort/releases)
-
-3.[Optional] CPU Power management: Create own SSDT-DATA for performance/ Battery saving patch [**CPUFriendFriend**](https://github.com/corpnewt/CPUFriendFriend)
-
-
-4.[Optional] GenSMBIOS: generate SMBIOS [corpnewt repo](https://github.com/corpnewt/GenSMBIOS)
+Install AsusSMC daemon for keyboard backlight and Fn keys on Asus laptops. download from: [**AsusSMC repo**](https://github.com/hieplpvip/AsusSMC/releases) 
 
 # CFG Lock Offset
 Asus S510UQ bios version 309/310 CFG Lock offset is **0x527**, [Follow Dortania guide for unlock CFG](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html)
 
-## Changelog
+# Attention
+Next update will remove my EFI and fork from whatnameisit. His EFI is perfect for S510 Series. 
+
+# Changelog
 **Feb 7, 2021**
 - seperate Intel and bcrm Wifi EFI  
 
