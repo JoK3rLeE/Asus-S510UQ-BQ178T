@@ -1,3 +1,7 @@
+# Abandoned, Use Leebinder EFI if you have discrete card and keyboard light version. 
+
+https://github.com/LeeBinder/Asus-Vivobook-S510UA-Hackintosh/
+
 # Specification
 Device | Details | Status |
 ------------ | ------------- | ------------- | 
